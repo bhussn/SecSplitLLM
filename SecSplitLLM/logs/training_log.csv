@@ -1,1 +1,81 @@
-working on integrating logs to .csv
+GPT-2
+------
+Test 1:
+    Performance Metrics
+    Epoch 	Training loss 	Validation Loss 	Accuracy
+    1 	1.886900 	1.872230 	40%
+
+        Training Time: 1 minutes and 7 seconds
+
+    Resource Usage
+
+        GPU Type: Tesla T4
+        GPU Memory Used: 13.2/15 GB
+        DISK Memory Used: 44.4/112.6 GB
+        RAM Memory Used: 5.8/12.7 GB
+        GPU Utilization: 88%
+        Driver/CUDA version: 550.54.15
+Test 2:
+    Performance Metrics
+    Epoch 	Training loss 	Validation Loss 	Accuracy
+    1 	0.864000 	0.009613 	100%
+
+        Training Time: 55 seconds
+
+    Resource Usage
+
+        GPU Type: Tesla T4
+        GPU Memory Used: 11.1/15 GB
+        Disk Memory Used: 48.8/112.6 GB
+        RAM Memory Used: 5.8/12.7 GB
+        GPU Utilization: 74%
+        Driver/CUDA version: 550.54.15
+Test 3:
+    Performance Metrics
+    Epoch 	Training loss 	Validation Loss 	Accuracy
+    1 	1.743400 	1.507292 	51%
+
+        Training Time: 55 seconds
+
+    Resource Usage
+
+        GPU Type: Tesla T4
+        GPU Memory Used: 11.2/15 GB
+        Disk Memory Used: 49.8/112.6 GB
+        RAM Memory Used: 4.2/12.7 GB
+        GPU Utilization: 74.67%
+        Driver/CUDA version: 550.54.15
+
+Test 4:
+    Performance Metrics
+    Epoch 	Training loss 	Validation Loss 	Accuracy
+    1 	7.192600 	4.676247 	47%
+
+        Training Time: 2 minutes 22 seconds (worst performance yet)
+
+    Resource Usage
+
+        GPU Type: Tesla T4
+        GPU Memory Used: 11.2/15 GB
+        Disk Memory Used: 49.8/112.6 GB
+        RAM Memory Used: 4.4/12.7 GB
+        GPU Utilization: 74.67%
+        Driver/CUDA version: 550.54.15
+
+
+BERT
+----
+Test 1:
+    Performance Metrics
+    Epoch 	Training Loss 	Validation Loss 	Accuracy
+    1 	0.348400 	0.477652 	86.21%
+
+        Training time: 659.60 seconds (~11 minutes)
+
+    Resource Usage
+
+        GPU Type: Tesla T4
+        GPU Memory Used: 5,892 MiB out of 15,360 MiB
+        GPU Utilization: 91%
+        Driver/CUDA Version: 550.54.15 / 12.4
+
