@@ -4,8 +4,8 @@
 This project fine-tunes 'bert-base-uncased' using the SST-2 dataste via the Hugging Face's Trainer API
 
 ## Setup
-1. Copy the Colab notebook
-2. Execute the nootbook cells to start training
+1. Open the Google Colab notebook
+2. Execute the notebook cells
 
 # Benchmark Summary
 ## Training Details
