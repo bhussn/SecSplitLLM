@@ -1,10 +1,11 @@
+""" This method is depreciated. Please use [flwr run <project-name>] to run project """
 import torch
 from flwr.simulation import start_simulation
 from flwr.server.server import ServerConfig
 from fed_ner import client_app, server_app
 
 def main():
-    num_clients = 5
+    num_clients = 10
     num_rounds = 10
 
     client_config = {
