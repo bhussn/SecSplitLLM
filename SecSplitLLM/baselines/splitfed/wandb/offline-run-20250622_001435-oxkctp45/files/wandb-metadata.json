@@ -1,0 +1,30 @@
+{
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2025-06-22T04:14:36.276652Z",
+  "args": [
+    "--app",
+    ".",
+    "--num-supernodes",
+    "3"
+  ],
+  "program": "/mnt/c/Users/bhuss/Downloads/secsplit/practice/SPLITFED/sf/bin/flower-simulation",
+  "root": "/mnt/c/Users/bhuss/Downloads/secsplit/practice/SPLITFED/splitfed",
+  "host": "DESKTOP-TV5FSUE",
+  "executable": "/mnt/c/Users/bhuss/Downloads/secsplit/practice/SPLITFED/sf/bin/python3",
+  "cpu_count": 10,
+  "cpu_count_logical": 20,
+  "disk": {
+    "/": {
+      "total": "1081101176832",
+      "used": "34001047552"
+    }
+  },
+  "memory": {
+    "total": "8173817856"
+  },
+  "cpu": {
+    "count": 10,
+    "countLogical": 20
+  }
+}
