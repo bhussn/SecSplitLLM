@@ -21,11 +21,11 @@ packages = ["."]
 publisher = "bhussn"
 
 [tool.flwr.app.components]
-serverapp = "splitfed.server_app:app"
-clientapp = "splitfed.client_app:app"
+serverapp = "splitfed.server.server_split:app"
+clientapp = "splitfed.clients.client_split:app"
 
 [tool.flwr.app.config]
-num-server-rounds = 15
+num-server-rounds = 3
 fraction-fit = 0.5
 local-epochs = 1
 
@@ -33,4 +33,4 @@ local-epochs = 1
 default = "local-simulation"
 
 [tool.flwr.federations.local-simulation]
-options.num-supernodes = 10
+options.num-supernodes = 5

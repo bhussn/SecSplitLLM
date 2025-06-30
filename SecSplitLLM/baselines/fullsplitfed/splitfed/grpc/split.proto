@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package splitfed;
+
+service SplitLearning {
+  // Forward pass: client sends activation and metadata, server returns logits, loss, and gradient
+  rpc ForwardPass(ForwardRequest) returns (ForwardReply);
+
+  // Inference (no training)
+  rpc Inference(InferenceRequest) returns (InferenceReply);
+}
+
+// ========== FORWARD + BACKWARD ==========
+message ForwardRequest {
+  repeated float activation = 1;
+  repeated int32 activation_shape = 2;
+
+  repeated float attention_mask = 3;
+  repeated int32 attention_mask_shape = 4;
+
+  repeated int32 labels = 5;
+
+  int32 client_id = 6;
+  int32 round = 7;
+  int32 batch_id = 8;
+}
+
+message ForwardReply {
+  repeated float logits = 1;
+  repeated int32 logits_shape = 2;
+
+  float loss = 3;
+
+  // NEW: gradient w.r.t. smashed activations (sent back to client)
+  repeated float grad_smashed = 4;
+  repeated int32 grad_shape = 5;
+}
+
+// ========== INFERENCE ==========
+message InferenceRequest {
+  repeated float activation = 1;
+  repeated int32 activation_shape = 2;
+
+  repeated float attention_mask = 3;
+  repeated int32 attention_mask_shape = 4;
+}
+
+message InferenceReply {
+  repeated float logits = 1;
+  repeated int32 logits_shape = 2;
+}

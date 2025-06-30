@@ -38,7 +38,7 @@ def server_fn(context: Context) -> ServerAppComponents:
             f"Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}"
         )
         append_csv(server_round, precision, recall, f1)
-        # Optionally add wandb logging here if enabled
+        
         return loss, {"precision": precision, "recall": recall, "f1": f1}
 
     # Initialize CSV file before training
