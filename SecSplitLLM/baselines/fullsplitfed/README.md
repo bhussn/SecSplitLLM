@@ -2,10 +2,11 @@
 1. pull the new code
 2. The gRPC files may be corrupted
     - Delete all .py files in the folder (rm -r *.py) 
-    - Make a new flwr env with the following dependencies "pip install grpcio grpcio-tools"
+    - Make a new conda environment with the following dependencies "pip install grpcio grpcio-tools"
     - Inside that environemnt, regenerate the needed files with:
         - Be in the fullsplited directory
         - regenerated with: "python -m grpc_tools.protoc -I=grpc --python_out=grpc --grpc_python_out=grpc grpc/split.proto"
+    - Leave the environment and go back to the original flwr environment 
 3. If things are still not working, create a new conda environment and 
    download requirements.txt with "pip install -r requirements.txt"
 4. Running the program: (ensure you are in the fullsplitfed folder)
