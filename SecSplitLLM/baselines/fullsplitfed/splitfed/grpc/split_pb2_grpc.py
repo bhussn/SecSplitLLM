@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-import split_pb2 as split__pb2
+from . import split_pb2 as split__pb2
 
 GRPC_GENERATED_VERSION = '1.73.1'
 GRPC_VERSION = grpc.__version__
@@ -50,15 +50,13 @@ class SplitLearningServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def ForwardPass(self, request, context):
-        """Forward pass: client sends activation and metadata, server returns logits, loss, and gradient
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def Inference(self, request, context):
-        """Inference (no training)
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')

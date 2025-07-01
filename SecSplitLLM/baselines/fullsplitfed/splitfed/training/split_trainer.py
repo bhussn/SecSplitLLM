@@ -8,6 +8,18 @@ from time import time
 from sklearn.metrics import f1_score
 from splitfed.training.utils import append_timing
 from splitfed.grpc import split_pb2
+import os
+# Set the cache directory path
+cache_dir = "splitfed/hf_cache"
+
+# Create cache directory if it doesn't exist
+os.makedirs(cache_dir, exist_ok=True)
+
+# Set environment variables early before any HF import
+os.environ["HF_HUB_DISABLE_TELEMETRY"] = "1"
+os.environ["TRANSFORMERS_CACHE"] = cache_dir
+os.environ["HF_HOME"] = cache_dir
+os.environ["HF_DATASETS_OFFLINE"] = "1"
 
 # Constants
 MAX_LEN = 128
@@ -17,7 +29,6 @@ TIMING_CSV_PATH = "timing_log.csv"
 
 # Tokenizer
 tokenizer = BertTokenizer.from_pretrained(MODEL_NAME, cache_dir="splitfed/hf_cache")
-
 
 class SST2Dataset(Dataset):
     def __init__(self, encodings, labels):
@@ -36,7 +47,7 @@ class SST2Dataset(Dataset):
 
 
 def load_data(partition_id: int, num_partitions: int, split: str = "train") -> DataLoader:
-    dataset = load_dataset("glue", "sst2", cache_dir="./hf_cache")
+    dataset = load_dataset("glue", "sst2", cache_dir="splitfed/hf_cache")
     subset = dataset[split].shard(num_shards=num_partitions, index=partition_id)
 
     encodings = tokenizer(
@@ -53,7 +64,7 @@ def load_data(partition_id: int, num_partitions: int, split: str = "train") -> D
 
 def train(client_model, dataloader, device, grpc_stub, round_num=None):
     client_model.train()
-    optimizer = torch.optim.AdamW(client_model.parameters(), lr=2e-5)
+    optimizer = torch.optim.SGD(client_model.parameters(), lr=0.01, momentum=0.9)
 
     total_fwd_time = 0.0
     total_bwd_time = 0.0

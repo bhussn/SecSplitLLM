@@ -1,32 +1,15 @@
-# splitfed: A Flower / PyTorch app
-
-## Install dependencies and project
-
-```bash
-pip install -e .
-```
-
-## Run with the Simulation Engine
-
-In the `splitfed` directory, use `flwr run` to run a local simulation:
-
-```bash
-flwr run .
-```
-
-Refer to the [How to Run Simulations](https://flower.ai/docs/framework/how-to-run-simulations.html) guide in the documentation for advice on how to optimize your simulations.
-
-## Run with the Deployment Engine
-
-Follow this [how-to guide](https://flower.ai/docs/framework/how-to-run-flower-with-deployment-engine.html) to run the same app in this example but with Flower's Deployment Engine. After that, you might be interested in setting up [secure TLS-enabled communications](https://flower.ai/docs/framework/how-to-enable-tls-connections.html) and [SuperNode authentication](https://flower.ai/docs/framework/how-to-authenticate-supernodes.html) in your federation.
-
-You can run Flower on Docker too! Check out the [Flower with Docker](https://flower.ai/docs/framework/docker/index.html) documentation.
-
-## Resources
-
-- Flower website: [flower.ai](https://flower.ai/)
-- Check the documentation: [flower.ai/docs](https://flower.ai/docs/)
-- Give Flower a ⭐️ on GitHub: [GitHub](https://github.com/adap/flower)
-- Join the Flower community!
-  - [Flower Slack](https://flower.ai/join-slack/)
-  - [Flower Discuss](https://discuss.flower.ai/)
+# Instructions 
+1. pull the new code
+2. The gRPC files may be corrupted
+    - Delete all .py files in the folder (rm -r *.py) 
+    - Make a new flwr env with the following dependencies "pip install grpcio grpcio-tools"
+    - Inside that environemnt, regenerate the needed files with:
+        - Be in the fullsplited directory
+        - regenerated with: "python -m grpc_tools.protoc -I=grpc --python_out=grpc --grpc_python_out=grpc grpc/split.proto"
+3. If things are still not working, create a new conda environment and 
+   download requirements.txt with "pip install -r requirements.txt"
+4. Running the program: (ensure you are in the fullsplitfed folder)
+    - "python splitfed/server/sever_split.py &" <--- run server
+    - "flwr run ." <--- run program
+5. Use "lsof -i :50051" to see running servers and be sure to do "kill PID" to
+   clean up runs.

@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0bsplit.proto\x12\x08splitfed\"\xb8\x01\n\x0e\x46orwardRequest\x12\x12\n\nactivation\x18\x01 \x03(\x02\x12\x18\n\x10\x61\x63tivation_shape\x18\x02 \x03(\x05\x12\x16\n\x0e\x61ttention_mask\x18\x03 \x03(\x02\x12\x1c\n\x14\x61ttention_mask_shape\x18\x04 \x03(\x05\x12\x0e\n\x06labels\x18\x05 \x03(\x05\x12\x11\n\tclient_id\x18\x06 \x01(\x05\x12\r\n\x05round\x18\x07 \x01(\x05\x12\x10\n\x08\x62\x61tch_id\x18\x08 \x01(\x05\"l\n\x0c\x46orwardReply\x12\x0e\n\x06logits\x18\x01 \x03(\x02\x12\x14\n\x0clogits_shape\x18\x02 \x03(\x05\x12\x0c\n\x04loss\x18\x03 \x01(\x02\x12\x14\n\x0cgrad_smashed\x18\x04 \x03(\x02\x12\x12\n\ngrad_shape\x18\x05 \x03(\x05\"v\n\x10InferenceRequest\x12\x12\n\nactivation\x18\x01 \x03(\x02\x12\x18\n\x10\x61\x63tivation_shape\x18\x02 \x03(\x05\x12\x16\n\x0e\x61ttention_mask\x18\x03 \x03(\x02\x12\x1c\n\x14\x61ttention_mask_shape\x18\x04 \x03(\x05\"6\n\x0eInferenceReply\x12\x0e\n\x06logits\x18\x01 \x03(\x02\x12\x14\n\x0clogits_shape\x18\x02 \x03(\x05\x32\x93\x01\n\rSplitLearning\x12?\n\x0b\x46orwardPass\x12\x18.splitfed.ForwardRequest\x1a\x16.splitfed.ForwardReply\x12\x41\n\tInference\x12\x1a.splitfed.InferenceRequest\x1a\x18.splitfed.InferenceReplyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0bsplit.proto\x12\x08splitfed\"\xbe\x01\n\x0e\x46orwardRequest\x12\x18\n\x10\x61\x63tivation_bytes\x18\x01 \x01(\x0c\x12\x18\n\x10\x61\x63tivation_shape\x18\x02 \x03(\x05\x12\x16\n\x0e\x61ttention_mask\x18\x03 \x03(\x02\x12\x1c\n\x14\x61ttention_mask_shape\x18\x04 \x03(\x05\x12\x0e\n\x06labels\x18\x05 \x03(\x05\x12\x11\n\tclient_id\x18\x06 \x01(\x05\x12\r\n\x05round\x18\x07 \x01(\x05\x12\x10\n\x08\x62\x61tch_id\x18\x08 \x01(\x05\"r\n\x0c\x46orwardReply\x12\x1a\n\x12grad_smashed_bytes\x18\x01 \x01(\x0c\x12\x12\n\ngrad_shape\x18\x02 \x03(\x05\x12\x0e\n\x06logits\x18\x03 \x03(\x02\x12\x14\n\x0clogits_shape\x18\x04 \x03(\x05\x12\x0c\n\x04loss\x18\x05 \x01(\x02\"v\n\x10InferenceRequest\x12\x12\n\nactivation\x18\x01 \x03(\x02\x12\x18\n\x10\x61\x63tivation_shape\x18\x02 \x03(\x05\x12\x16\n\x0e\x61ttention_mask\x18\x03 \x03(\x02\x12\x1c\n\x14\x61ttention_mask_shape\x18\x04 \x03(\x05\"6\n\x0eInferenceReply\x12\x0e\n\x06logits\x18\x01 \x03(\x02\x12\x14\n\x0clogits_shape\x18\x02 \x03(\x05\x32\x93\x01\n\rSplitLearning\x12?\n\x0b\x46orwardPass\x12\x18.splitfed.ForwardRequest\x1a\x16.splitfed.ForwardReply\x12\x41\n\tInference\x12\x1a.splitfed.InferenceRequest\x1a\x18.splitfed.InferenceReplyb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -32,13 +32,13 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'split_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
   _globals['_FORWARDREQUEST']._serialized_start=26
-  _globals['_FORWARDREQUEST']._serialized_end=210
-  _globals['_FORWARDREPLY']._serialized_start=212
-  _globals['_FORWARDREPLY']._serialized_end=320
-  _globals['_INFERENCEREQUEST']._serialized_start=322
-  _globals['_INFERENCEREQUEST']._serialized_end=440
-  _globals['_INFERENCEREPLY']._serialized_start=442
-  _globals['_INFERENCEREPLY']._serialized_end=496
-  _globals['_SPLITLEARNING']._serialized_start=499
-  _globals['_SPLITLEARNING']._serialized_end=646
+  _globals['_FORWARDREQUEST']._serialized_end=216
+  _globals['_FORWARDREPLY']._serialized_start=218
+  _globals['_FORWARDREPLY']._serialized_end=332
+  _globals['_INFERENCEREQUEST']._serialized_start=334
+  _globals['_INFERENCEREQUEST']._serialized_end=452
+  _globals['_INFERENCEREPLY']._serialized_start=454
+  _globals['_INFERENCEREPLY']._serialized_end=508
+  _globals['_SPLITLEARNING']._serialized_start=511
+  _globals['_SPLITLEARNING']._serialized_end=658
 # @@protoc_insertion_point(module_scope)
