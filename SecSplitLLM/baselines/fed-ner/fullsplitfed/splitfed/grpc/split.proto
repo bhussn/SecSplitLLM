@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package splitfed;
+
+service SplitLearning {
+  rpc ForwardPass(ForwardRequest) returns (ForwardReply);
+  rpc Inference(InferenceRequest) returns (InferenceReply);
+}
+
+message ForwardRequest {
+  // raw bytes of the flattened activation array
+  bytes activation_bytes         = 1;
+  // shape to reconstruct it
+  repeated int32 activation_shape  = 2;
+
+  // Send attention_mask as efficient bytes
+  bytes attention_mask_bytes     = 3;
+  repeated int32 attention_mask_shape = 4;
+
+  repeated int32 labels            = 5;
+  int32 client_id = 6;
+  int32 round     = 7;
+  int32 batch_id  = 8;
+}
+
+message ForwardReply {
+  // raw bytes of the flattened gradient array
+  bytes grad_smashed_bytes  = 1;
+  // shape to reconstruct it
+  repeated int32 grad_shape = 2;
+
+  // existing fields unchanged
+  repeated float logits     = 3;
+  repeated int32 logits_shape = 4;
+  float loss                = 5;
+}
+
+message InferenceRequest {
+  repeated float activation = 1;
+  repeated int32 activation_shape = 2;
+
+  // --- CORRECTED ---
+  bytes attention_mask_bytes     = 3;
+  repeated int32 attention_mask_shape = 4;
+  // --- END CORRECTION ---
+}
+
+message InferenceReply {
+  repeated float logits     = 1;
+  repeated int32 logits_shape = 2;
+}
