@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package split;
+
+service SplitLearningService {
+  rpc SendActivations (ActivationRequest) returns (GradientResponse);
+}
+
+message ActivationRequest {
+  repeated float activations = 1;
+  repeated int32 shape = 2;
+  repeated float attention_mask = 3;
+  repeated int32 mask_shape = 4;
+  repeated int32 labels = 5;
+}
+
+message GradientResponse {
+  repeated float gradients = 1;
+  repeated int32 shape = 2;
+  float loss = 3;
+  float accuracy = 4;
+}
