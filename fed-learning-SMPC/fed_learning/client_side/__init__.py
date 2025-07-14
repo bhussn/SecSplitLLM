@@ -1,1 +1,0 @@
-"""fed-learning-SMPC: client app."""
