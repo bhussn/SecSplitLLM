@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling", "setuptools"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fed-learning"
+version = "1.0.0"
+description = "Federated Learning with SMPC"
+license = "Apache-2.0"
+dependencies = [
+    "flwr[simulation]==1.19.0",  
+    "torch>=2.7.0",
+    "transformers==4.53.1",
+    "datasets==3.1.0",
+    "evaluate==0.4.4",
+    "seqeval",
+    "peft==0.10.0",
+    "crypten==0.4.1",
+    "protobuf<4.0.0",  # Crypten compatibility
+    "scikit-learn",
+    "numpy",
+    "cryptography",    # Additional security dependency
+    "tqdm" 
+]
+
+[project.optional-dependencies]
+gpu = [
+    "torch==2.3.1+cu121",             # GPU version
+    "transformers[torch]==4.41.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.flwr.app]
+publisher = "Alejandro"
+
+[tool.flwr.app.components]
+serverapp = "fed_learning.server_side.server_smpc:app"
+clientapp = "fed_learning.client_side.client_lora_smpc:app"
+
+[tool.flwr.app.config]
+num-server-rounds = 2              # Match server config
+local-epochs = 1
+batch-size = 16
+verbose = true
+smpc-world-size = 4                
+
+[tool.flwr.federations]
+default = "local-simulation"
+
+[tool.flwr.federations.local-simulation]
+options.num-supernodes = 3         # Must match SMPC world size
+simulation.num-client-managers = 3 # Must match SMPC world size
