@@ -1,4 +1,3 @@
-
 import sys
 import os
 import GPUtil
@@ -15,6 +14,18 @@ import sys
 import csv
 from transformers import get_linear_schedule_with_warmup
 from sklearn.model_selection import train_test_split
+
+#Crypten Setup
+import crypten
+# Configure for better performance
+try:
+    # For Crypten versions < 0.4.0
+    crypten.common.settings.encoder_precision = 16
+    crypten.common.settings.encoder_base = 2
+except AttributeError:
+    # For Crypten versions >= 0.4.0
+    crypten.encoder.precision_bits = 16
+    crypten.encoder.base = 2
 
 print("Using split_pb2 from:", split_pb2.__file__)
 
@@ -62,6 +73,33 @@ class SplitLearningClient(fl.client.NumPyClient):
         state_dict = dict(zip(self.model.state_dict().keys(), [torch.tensor(p) for p in parameters]))
         self.model.load_state_dict(state_dict, strict=True)
 
+    # ====== Crypten SMPC Functions ======
+    def encrypt_parameters(self, parameters):
+        """Encrypt model parameters using SMPC"""
+        encrypted_params = []
+        for param in parameters:
+            # Convert numpy array to torch tensor
+            tensor = torch.tensor(param)
+            # Encrypt using CrypTen
+            encrypted_tensor = crypten.cryptensor(tensor, src=0)
+            encrypted_params.append(encrypted_tensor)
+        return encrypted_params
+
+    def decrypt_parameters(self, encrypted_parameters):
+        """Decrypt SMPC-encrypted parameters"""
+        plain_parameters = []
+        for enc_arr in encrypted_parameters:
+            # Convert numpy array to crypten tensor
+            try:
+                enc_tensor = crypten.cryptensor(torch.from_numpy(enc_arr))
+            except Exception as e:
+                logging.error(f"Parameter conversion failed: {str(e)}")
+                raise
+            # Convert back to plaintext
+            plain_tensor = enc_tensor.get_plain_text()
+            plain_parameters.append(plain_tensor.cpu().numpy())
+        return plain_parameters
+
     def send_activations(self, activations, attention_mask, labels, require_gradients=True):
         act_np = activations.detach().cpu().numpy()
         mask_np = attention_mask.detach().cpu().numpy()
@@ -100,7 +138,10 @@ class SplitLearningClient(fl.client.NumPyClient):
             return [], response.loss, response.accuracy
 
     def fit(self, parameters, config):
-        self.set_parameters(parameters)
+        # Decrypt global model from server
+        plain_parameters = self.decrypt_parameters(parameters)
+        self.set_parameters(plain_parameters)
+
         self.model.train()
         optimizer = torch.optim.Adam(self.model.parameters(), lr=3e-5, weight_decay=0.01)
         # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.9)
@@ -142,10 +183,17 @@ class SplitLearningClient(fl.client.NumPyClient):
 
         avg_loss = total_loss / total_samples
         avg_accuracy = total_correct / total_samples
-        return self.get_parameters(), total_samples, {"loss": avg_loss, "accuracy": avg_accuracy}
+
+        # Encrypt updated parameters before sending back
+        updated_params = self.get_parameters()
+        encrypted_params = self.encrypt_parameters(updated_params)
+        
+        return encrypted_params, total_samples, {"loss": avg_loss, "accuracy": avg_accuracy}
 
     def evaluate(self, parameters, config):
-        self.set_parameters(parameters)
+        """Modified to handle SMPC-encrypted parameters"""
+        plain_parameters = self.decrypt_parameters(parameters)
+        self.set_parameters(plain_parameters)
         self.model.eval()
         total_loss = 0.0
         total_correct = 0
@@ -178,9 +226,12 @@ if __name__ == "__main__":
     parser.add_argument("--local_epochs", type=int, default=3, help="Number of local training epochs")
     args = parser.parse_args()
 
+    # Initialize crypten context
+    if not crypten.is_initialized():
+        crypten.init()
+
     fl.client.start_client(
         server_address="localhost:8081",
         client=SplitLearningClient(args.cid, args.local_epochs).to_client(),
         grpc_max_message_length=1024 * 1024 * 1024
     )
-
