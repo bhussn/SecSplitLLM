@@ -10,6 +10,21 @@ from torch.utils.data import DataLoader
 import flwr as fl
 from models.split_bert_model import BertSplitConfig, BertModel_Client, BertModel_Server
 
+# ====== SMPC Integration ======
+import crypten
+if not crypten.is_initialized():
+    crypten.init()
+try:
+    # For Crypten versions < 0.4.0
+    crypten.common.settings.encoder_precision = 16
+    crypten.common.settings.encoder_base = 2
+except AttributeError:
+    # For Crypten versions >= 0.4.0
+    crypten.encoder.precision_bits = 16
+    crypten.encoder.base = 2
+import smpc_aggregate  # secure aggregation module
+# ==============================
+
 # Setup logging
 import logging
 logging.basicConfig(
@@ -43,7 +58,7 @@ def centralized_evaluate(parameters):
     client_model = BertModel_Client(split_config)
     server_model = BertModel_Server(split_config)
 
-    weights = fl.common.parameters_to_ndarrays(parameters)
+    weights = parameters  # Parameters are now plaintext numpy arrays
     client_items = list(client_model.state_dict().items())
     server_items = list(server_model.state_dict().items())
     client_state = {k: torch.tensor(v) for (k, _), v in zip(client_items, weights[:len(client_items)])}
@@ -107,35 +122,66 @@ class LoggingStrategy(fl.server.strategy.FedAvg):
         return {"accuracy": avg_accuracy, "loss": avg_loss}   
  
     def aggregate_fit(self, rnd, results, failures):
-        aggregated = super().aggregate_fit(rnd, results, failures)
-        if aggregated is not None:
-            parameters, _ = aggregated
-            if parameters is None:
-                print("[Server] Warning: Aggregated parameters are None.")
-                return aggregated
-            eval_loss, eval_acc = centralized_evaluate(parameters)
-
-            # Log to CSV
-            round_history.append(rnd)
-            train_acc_history.append(self.last_train_acc)
-            eval_acc_history.append(eval_acc)
-            with open(csv_file, "a", newline="") as f:
-                writer = csv.writer(f)
-                writer.writerow([rnd, self.last_train_loss, self.last_train_acc, eval_loss, eval_acc])
-
-            # # Early stopping
-            # if eval_acc > self.best_eval_acc:
-            #     self.best_eval_acc = eval_acc
-            #     self.no_improve_rounds = 0
-            # else:
-            #     self.no_improve_rounds += 1
-            #     if self.no_improve_rounds >= self.early_stop_patience:
-            #         print(f"[Early Stopping] No improvement for {self.early_stop_patience} rounds. Stopping training.")
-            #         raise SystemExit(0)
-        return aggregated
+        # Collect encrypted updates and sample counts
+        encrypted_updates = []
+        sample_counts = []
+        metrics_list = []
+        
+        for client in results:
+            if client[1].status != fl.common.Status.Code.OK:
+                continue
+            parameters = client[1].parameters
+            samples = client[1].num_examples
+            
+            # Convert Parameters to list of numpy arrays
+            ndarrays = fl.common.parameters_to_ndarrays(parameters)
+            
+            # Convert each numpy array to a crypten tensor
+            encrypted_update = [crypten.cryptensor(torch.tensor(arr)) for arr in ndarrays]
+            encrypted_updates.append(encrypted_update)
+            sample_counts.append(samples)
+            metrics_list.append((samples, client[1].metrics))
+        
+        if not encrypted_updates:
+            print("[SMPC] No valid updates to aggregate")
+            return None, {}
+        
+        # Securely aggregate updates
+        start_time = time.time()
+        try:
+            aggregated_encrypted = smpc_aggregate.secure_aggregate(encrypted_updates, sample_counts)
+        except Exception as e:
+            logging.error(f"SMPC aggregation failed: {str(e)}")
+            raise
+        
+        agg_time = time.time() - start_time
+        print(f"[SMPC] Secure aggregation completed in {agg_time:.2f}s")
+        
+        # Convert tensors to numpy without decrypting
+        aggregated_plain = [tensor.share.numpy() for tensor in aggregated_encrypted]
+        # Evaluate the aggregated model
+        eval_loss, eval_acc = centralized_evaluate(aggregated_plain)
+        
+        # Log to CSV
+        round_history.append(rnd)
+        train_acc_history.append(self.last_train_acc)
+        eval_acc_history.append(eval_acc)
+        with open(csv_file, "a", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow([rnd, self.last_train_loss, self.last_train_acc, eval_loss, eval_acc])
+        
+        # Aggregate metrics
+        metrics_aggregated = self.aggregate_fit_metrics(metrics_list)
+        
+        # Convert to Flower parameters
+        aggregated_params = fl.common.ndarrays_to_parameters(aggregated_encrypted_np)
+        
+        return aggregated_params, metrics_aggregated
 
     def evaluate(self, rnd, parameters):
-        loss, accuracy = centralized_evaluate(parameters)
+        # Convert Flower parameters to numpy arrays
+        ndarrays = fl.common.parameters_to_ndarrays(parameters)
+        loss, accuracy = centralized_evaluate(ndarrays)
         return loss, {"accuracy": accuracy}
 
 
