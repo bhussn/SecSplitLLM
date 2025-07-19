@@ -49,48 +49,48 @@ class FlowerSmpcClient(fl.client.Client):
         self.trainloader, self.testloader = load_data(self.cid, num_partitions=10)
         self.smpc_initialized = False  # Track SMPC initialization status
 
-def initialize_smpc(self, smpc_world_size: int):
-    if not self.smpc_initialized:
-        rank = self.cid + 1
-        world_size = smpc_world_size
+    def initialize_smpc(self, smpc_world_size: int):
+        if not self.smpc_initialized:
+            rank = self.cid + 1
+            world_size = smpc_world_size
         
-        # Use unique port per client
-        port = 29500  # Same port for every client
+            # Use unique port per client
+            port = 29500  # Same port for every client
         
-        # Set environment variables
-        os.environ['MASTER_ADDR'] = '127.0.0.1'
-        os.environ['MASTER_PORT'] = str(port)  # Unique port
-        os.environ['RANK'] = str(rank)
-        os.environ['WORLD_SIZE'] = str(world_size)
+            # Set environment variables
+            os.environ['MASTER_ADDR'] = '127.0.0.1'
+            os.environ['MASTER_PORT'] = str(port)  # Unique port
+            os.environ['RANK'] = str(rank)
+            os.environ['WORLD_SIZE'] = str(world_size)
         
-        # Add connection retry logic
-        for attempt in range(3):
-            try:
-                dist.init_process_group(
-                    backend="gloo",
-                    init_method="env://",
-                    world_size=world_size,
-                    rank=rank,
-                    timeout=timedelta(seconds=10))  # Timeout
-                break
-            except RuntimeError as e:
-                if "Address already in use" in str(e) and attempt < 2:
-                    wait_time = 2 ** attempt
-                    print(f"Retry {attempt+1}/3 in {wait_time}s...")
-                    time.sleep(wait_time)
-                else:
-                    raise
+            # Add connection retry logic
+            for attempt in range(3):
+                try:
+                    dist.init_process_group(
+                        backend="gloo",
+                        init_method="env://",
+                        world_size=world_size,
+                        rank=rank,
+                        timeout=timedelta(seconds=10))  # Timeout
+                    break
+                except RuntimeError as e:
+                    if "Address already in use" in str(e) and attempt < 2:
+                        wait_time = 2 ** attempt
+                        print(f"Retry {attempt+1}/3 in {wait_time}s...")
+                        time.sleep(wait_time)
+                    else:
+                        raise
         
-        crypten.init()
-        self.smpc_initialized = True
+            crypten.init()
+            self.smpc_initialized = True
  
-def get_parameters(self, config: Config) -> Parameters:
+    def get_parameters(self, config: Config) -> Parameters:
         """Return the current local LoRA parameters."""
         print(f"[Client {self.cid}] get_parameters")
         lora_weights = get_lora_weights(self.net)
         return ndarrays_to_parameters(lora_weights)
 
-def fit(self, ins: FitIns) -> FitRes:
+    def fit(self, ins: FitIns) -> FitRes:
         start_time = time.time()
         config = ins.config or {}
         smpc_world_size = config.get("smpc_world_size", 2)
@@ -163,7 +163,7 @@ def fit(self, ins: FitIns) -> FitRes:
             metrics={"comm_cost_bytes": comm_cost},
         )
 
-def evaluate(self, ins: EvaluateIns) -> EvaluateRes:
+    def evaluate(self, ins: EvaluateIns) -> EvaluateRes:
         """Evaluate the global model on the local test set."""
         parameters = ins.parameters
         
