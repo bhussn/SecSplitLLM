@@ -221,7 +221,7 @@ def set_lora_weights(net: torch.nn.Module, parameters: List[np.ndarray]):
     })
     net.load_state_dict(state_dict, strict=False)
 
-# --- NEW: SMPC-SPECIFIC FUNCTIONS ---
+# --- SMPC-SPECIFIC FUNCTIONS ---
 def secret_share_weights(weights: List[np.ndarray]) -> List:
     """Convert weights to CrypTensors without quantization"""
     return [crypten.cryptensor(torch.tensor(w).float().to(DEVICE)) for w in weights]
