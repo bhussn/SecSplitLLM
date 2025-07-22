@@ -148,7 +148,7 @@ class LoggingStrategy(fl.server.strategy.FedAvg):
         
         # Securely aggregate updates
         start_time = time.time()
-        try:
+        try: # Here is where the smpc_aggregate function is used
             aggregated_encrypted = smpc_aggregate.secure_aggregate(encrypted_updates, sample_counts)
         except Exception as e:
             logging.error(f"SMPC aggregation failed: {str(e)}")
