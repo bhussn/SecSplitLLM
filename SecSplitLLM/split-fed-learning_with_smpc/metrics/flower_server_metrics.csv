@@ -1,0 +1,2 @@
+timestamp,role,event,latency_sec,memory_mb,comm_kb
+2025-07-27 22:32:39,flower_server,centralized_evaluation,265.9265704154968,4696.24609375,0.046875
