@@ -1,0 +1,435 @@
+Starting federated learning run at Wed Jul 30 08:03:29 EDT 2025
+Launching gRPC server on port 50053...
+Waiting for gRPC server to be ready on port 50053...
+gRPC server is ready.
+Launching Flower server on port 8083...
+Waiting for Flower server to be ready on port 8083...
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+2025-07-30 08:03:31.799006: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:03:31.811948: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877011.828317  927378 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877011.832862  927378 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877011.845024  927378 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877011.845041  927378 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877011.845043  927378 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877011.845045  927378 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:03:31.848842: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-30 08:03:34.694733: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:03:34.706640: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877014.721253  927370 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877014.725713  927370 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877014.737708  927370 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877014.737726  927370 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877014.737729  927370 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877014.737735  927370 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:03:34.741012: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=2, no round_timeout
+[92mINFO [0m:      Flower ECE: gRPC server running (2 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Requesting initial parameters from one random client
+Flower server is ready.
+Launching client 0...
+Launching client 1...
+Launching client 2...
+Launching client 3...
+Launching client 4...
+2025-07-30 08:03:42.761126: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:03:42.773211: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877022.788152  927805 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877022.792834  927805 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-30 08:03:42.804800: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+W0000 00:00:1753877022.805242  927805 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.805260  927805 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.805262  927805 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.805264  927805 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:03:42.808593: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-30 08:03:42.816463: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-30 08:03:42.829159: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877022.830975  927802 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877022.835445  927802 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-30 08:03:42.841903: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+W0000 00:00:1753877022.847320  927802 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.847339  927802 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.847341  927802 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.847342  927802 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:03:42.850665: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877022.857638  927808 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877022.862213  927808 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877022.874483  927808 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.874503  927808 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.874506  927808 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.874508  927808 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:03:42.877982: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-30 08:03:42.904522: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:03:42.917000: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877022.932857  927811 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877022.937392  927811 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877022.949826  927811 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.949853  927811 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.949855  927811 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.949857  927811 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:03:42.953357: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-30 08:03:42.954083: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:03:42.966898: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877022.982839  927799 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877022.987456  927799 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877022.999829  927799 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.999848  927799 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.999850  927799 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877022.999852  927799 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:03:43.003297: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      
+[92mINFO [0m:      Received: get_parameters message ad0552e3-4b7d-466d-8bd7-72324e8edcf5
+[93mWARNING [0m:   Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Received initial parameters from one random client
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.6936748038738145, {'accuracy': 0.5091743119266054}
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 619da57e-e06c-4f1a-a461-dbf671ee753b
+[93mWARNING [0m:   Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message ca36e45f-7a56-4759-b4bc-4783dabf3345
+[93mWARNING [0m:   Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 8040e9d2-5952-474c-b5d7-8e8afd1716a3
+[93mWARNING [0m:   Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 988baff2-6a77-4b90-9d2d-3e2f90ec6d3f
+[93mWARNING [0m:   Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 61b4dbd8-b82d-4de0-ad45-edbf93a29e84
+[93mWARNING [0m:   Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[Central Evaluation] Loss: 0.6937, Accuracy: 0.5092
+[Server] Secure aggregation started for round 1...
+2025-07-30 08:06:07.878064: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:06:07.889841: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877167.904100  928994 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877167.908560  928994 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877167.920610  928994 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877167.920629  928994 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877167.920631  928994 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877167.920632  928994 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:06:07.924020: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-30 08:06:21.066631: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:06:21.078555: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877181.093203  929138 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877181.097689  929138 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877181.109726  929138 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877181.109743  929138 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877181.109746  929138 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877181.109747  929138 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:06:21.113177: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-30 08:06:32.602755: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:06:32.614655: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877192.629167  929270 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877192.633577  929270 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877192.645790  929270 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877192.645812  929270 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877192.645815  929270 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877192.645817  929270 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:06:32.649233: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/crypten/__init__.py:64: RuntimeWarning: CrypTen is already initialized.
+  warnings.warn("CrypTen is already initialized.", RuntimeWarning)
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/crypten/__init__.py:64: RuntimeWarning: CrypTen is already initialized.
+  warnings.warn("CrypTen is already initialized.", RuntimeWarning)
+Process Process-2:
+Process Process-1:
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/crypten/__init__.py:64: RuntimeWarning: CrypTen is already initialized.
+  warnings.warn("CrypTen is already initialized.", RuntimeWarning)
+Process Process-3:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib64/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/crypten/mpc/context.py", line 30, in _launch
+    return_value = func(*func_args, **func_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 56, in _secure_aggregation_worker
+    client_tensors = [deserialize_encrypted_update(update) for update in client_updates_serialized]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 56, in <listcomp>
+    client_tensors = [deserialize_encrypted_update(update) for update in client_updates_serialized]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/crypten/mpc/context.py", line 30, in _launch
+    return_value = func(*func_args, **func_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 42, in deserialize_encrypted_update
+    buf = io.BytesIO(layer_bytes.tobytes())
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 56, in _secure_aggregation_worker
+    client_tensors = [deserialize_encrypted_update(update) for update in client_updates_serialized]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 56, in <listcomp>
+    client_tensors = [deserialize_encrypted_update(update) for update in client_updates_serialized]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 42, in deserialize_encrypted_update
+    buf = io.BytesIO(layer_bytes.tobytes())
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'bytes' object has no attribute 'tobytes'
+AttributeError: 'bytes' object has no attribute 'tobytes'
+Traceback (most recent call last):
+[CrypTen Rank 0] torch.cuda.is_available(): False
+  File "/usr/lib64/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/crypten/mpc/context.py", line 30, in _launch
+    return_value = func(*func_args, **func_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[CrypTen Rank 1] torch.cuda.is_available(): False
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 56, in _secure_aggregation_worker
+    client_tensors = [deserialize_encrypted_update(update) for update in client_updates_serialized]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 56, in <listcomp>
+    client_tensors = [deserialize_encrypted_update(update) for update in client_updates_serialized]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/smpc/smpc_aggregator.py", line 42, in deserialize_encrypted_update
+    buf = io.BytesIO(layer_bytes.tobytes())
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'bytes' object has no attribute 'tobytes'
+[CrypTen Rank 2] torch.cuda.is_available(): False
+[rank0]: [rank0]: Traceback (most recent call last):
+[rank0]: [rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/server/fl_smpc_server.py", line 247, in <module>
+[rank0]: [rank0]:     main()
+[rank0]: [rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/server/fl_smpc_server.py", line 225, in main
+[rank0]: [rank0]:     fl.server.start_server(
+[rank0]: [rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/server/app.py", line 164, in start_server
+[rank0]: [rank0]:     hist = run_fl(
+[rank0]: [rank0]:            ^^^^^^^
+[rank0]: [rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/server/server.py", line 492, in run_fl
+[rank0]: [rank0]:     hist, elapsed_time = server.fit(
+[rank0]: [rank0]:                          ^^^^^^^^^^^
+[rank0]: [rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/server/server.py", line 115, in fit
+[rank0]: [rank0]:     res_fit = self.fit_round(
+[rank0]: [rank0]:               ^^^^^^^^^^^^^^^
+[rank0]: [rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/server/server.py", line 251, in fit_round
+[rank0]: [rank0]:     ] = self.strategy.aggregate_fit(server_round, results, failures)
+[rank0]: [rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: [rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/server/fl_smpc_server.py", line 184, in aggregate_fit
+[rank0]: [rank0]:     if len(decrypted_global_update) != len(state_shapes):
+[rank0]: [rank0]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: [rank0]: TypeError: object of type 'NoneType' has no len()
