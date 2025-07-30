@@ -1,0 +1,121 @@
+Algorithm 1: Split Federated Learning with Optional DP and SMPC
+
+Input: Local dataset Dᵢ for each client i
+        Global model M split into M_client and M_server
+        Privacy flags: DP_ENABLED, SMPC_ENABLED
+        Federated aggregator A
+
+------------------------------------------------------
+ClientRoutine(i, M_client, M_server, Dᵢ)
+------------------------------------------------------
+1:  for each local epoch do
+2:      x, y ← sample minibatch from Dᵢ
+3:      h ← M_client.forward(x)                    ▷ Compute intermediate activations
+4:      if DP_ENABLED then
+5:          h ← Clip(h) + Noise(σ)                 ▷ Apply DP to activations
+6:      end if
+7:      Send h, attention_mask, y to ServerRoutine
+8:      g ← Receive gradients from ServerRoutine
+9:      if DP_ENABLED then
+10:         g ← Clip(g) + Noise(σ)                 ▷ Apply DP to gradients
+11:     end if
+12:     M_client.backward(g)                       ▷ Backpropagate and update
+13:     Δ_lora ← ComputeLoRAUpdate(M_client)       ▷ Extract local LoRA update
+14:     if SMPC_ENABLED then
+15:         shares ← SecretShare(Δ_lora)
+16:         Send shares to AggregatorRoutine
+17:     else
+18:         Send Δ_lora to AggregatorRoutine
+19:     end if
+20: end for
+
+------------------------------------------------------
+ServerRoutine(h, attention_mask, y, M_server)
+------------------------------------------------------
+21: logits ← M_server.forward(h, attention_mask)
+22: loss ← CrossEntropy(logits, y)
+23: g ← M_server.backward(loss)
+24: if DP_ENABLED then
+25:     g ← Clip(g) + Noise(σ)                     ▷ Apply DP to server-side gradients
+26: end if
+27: return g
+
+------------------------------------------------------
+AggregatorRoutine({Δ_lora₁, ..., Δ_loraₙ})
+------------------------------------------------------
+28: if SMPC_ENABLED then
+29:     aggregated ← SecureAggregate({shares₁, ..., sharesₙ})
+30: else
+31:     aggregated ← Mean({Δ_lora₁, ..., Δ_loraₙ})
+32: end if
+33: UpdateGlobalLoRA(aggregated)
+34: Broadcast updated global LoRA to all clients
+
+
+
+
+-----
+Algorithm 1: Split Federated Learning with Optional DP and SMPC
+
+Input:
+- Local dataset D_i for each client i
+- Global model M split into M_client and M_server
+- Privacy flags: DP_ENABLED, SMPC_ENABLED
+- Federated aggregator A
+
+------------------------------------------------------
+ClientRoutine(i, M_client, D_i)
+------------------------------------------------------
+1:  for each local epoch do
+2:      Sample minibatch (x_i, y_i) from D_i
+3:      Compute intermediate activations:
+        z_i = f_c(x_i; θ_c)
+4:      if DP_ENABLED then
+5:          Apply DP to activations:
+            ẑ_i = Clip(z_i) + Normal(0, σ² C² I)
+6:      end if
+7:      Send ẑ_i (or z_i if DP disabled), attention_mask, and y_i to ServerRoutine
+8:      Receive gradients ĝ_i from ServerRoutine
+9:      if DP_ENABLED then
+10:         Apply DP to gradients:
+            ĝ_i = Clip(ĝ_i) + Normal(0, σ_g² C_g² I)
+11:     end if
+12:     Backpropagate and update client model parameters θ_c using ĝ_i
+13:     Compute local LoRA update Δθ_c^(i)
+14:     if SMPC_ENABLED then
+15:         Create secret shares s_{i,k} of Δθ_c^(i)
+16:         Send shares {s_{i,k}} to AggregatorRoutine
+17:     else
+18:         Send Δθ_c^(i) to AggregatorRoutine
+19:     end if
+20: end for
+
+------------------------------------------------------
+ServerRoutine(ẑ_i, attention_mask, y_i, M_server)
+------------------------------------------------------
+21:  Forward pass on server-side model:
+      ŷ_i = f_s(ẑ_i; θ_s)
+22:  Compute loss:
+      ℓ_i = L(ŷ_i, y_i)
+23:  Backpropagate to get gradients w.r.t. ẑ_i and θ_s:
+      ∇_{ẑ_i} ℓ_i, ∇_{θ_s} ℓ_i
+24:  if DP_ENABLED then
+25:      Apply DP to activation gradients:
+        ẑ_grad_i = Clip(∇_{ẑ_i} ℓ_i) + Normal(0, σ_g² C_g² I)
+26:  end if
+27:  Return ẑ_grad_i to client
+
+------------------------------------------------------
+AggregatorRoutine({Δθ_c^(1), ..., Δθ_c^(N)})
+------------------------------------------------------
+28:  if SMPC_ENABLED then
+29:      Aggregate securely:
+        Δθ_c = SecureAggregate({s_{i,k}})
+30:  else
+31:      Aggregate by averaging:
+        Δθ_c = (1/N) ∑_{i=1}^N Δθ_c^(i)
+32:  end if
+33:  Update global client parameters:
+      θ_c ← θ_c + Δθ_c
+34:  Broadcast updated θ_c to all clients
+

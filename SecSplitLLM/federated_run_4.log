@@ -1,0 +1,1129 @@
+Starting federated learning run at Sun Jul 27 23:29:43 EDT 2025
+Launching gRPC server on port 50057...
+Waiting for gRPC server to be ready on port 50057...
+2025-07-27 23:30:27.197790: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 23:30:27.214362: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753673427.245125 4046157 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753673427.255215 4046157 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753673427.279340 4046157 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673427.279378 4046157 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673427.279382 4046157 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673427.279385 4046157 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-27 23:30:27.285575: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+gRPC server is ready.
+Launching Flower server on port 8087...
+Waiting for Flower server to be ready on port 8087...
+2025-07-27 23:30:59.220315: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 23:30:59.246718: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753673459.280239 4047016 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753673459.292654 4047016 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753673459.312686 4047016 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673459.312730 4047016 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673459.312733 4047016 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673459.312736 4047016 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-27 23:30:59.318656: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=10, no round_timeout
+[92mINFO [0m:      Flower ECE: gRPC server running (10 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Requesting initial parameters from one random client
+Flower server is ready.
+Launching client 0...
+Launching client 1...
+Launching client 2...
+Launching client 3...
+Launching client 4...
+2025-07-27 23:31:57.751330: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 23:31:57.775860: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753673517.800195 4047604 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753673517.807042 4047604 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753673517.835372 4047604 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673517.835426 4047604 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673517.835430 4047604 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673517.835432 4047604 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-27 23:31:57.842580: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-27 23:31:57.910708: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 23:31:57.929176: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753673517.952767 4047598 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753673517.959560 4047598 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753673517.993021 4047598 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673517.993058 4047598 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673517.993064 4047598 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673517.993067 4047598 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-27 23:31:57.999202: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-27 23:31:59.059742: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 23:31:59.078180: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753673519.122526 4047601 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753673519.130864 4047601 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753673519.175007 4047601 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673519.175048 4047601 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673519.175052 4047601 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673519.175054 4047601 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-27 23:31:59.186678: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-27 23:32:01.619073: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 23:32:01.641929: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753673521.669009 4047607 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753673521.676997 4047607 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753673521.698356 4047607 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673521.698390 4047607 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673521.698396 4047607 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673521.698399 4047607 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-27 23:32:01.702973: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-27 23:32:01.896652: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 23:32:01.919153: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753673521.942140 4047610 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753673521.953940 4047610 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753673522.004599 4047610 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673522.004634 4047610 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673522.004638 4047610 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753673522.004640 4047610 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-27 23:32:02.011269: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:26:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:26:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/27/2025 23:32:26:DEBUG:ChannelConnectivity.IDLE
+07/27/2025 23:32:26:DEBUG:ChannelConnectivity.CONNECTING
+07/27/2025 23:32:26:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+07/27/2025 23:32:26:INFO:
+[92mINFO [0m:      Received: get_parameters message 2481edc1-e60d-4bf3-be54-b69ae40922e0
+07/27/2025 23:32:26:INFO:Received: get_parameters message 2481edc1-e60d-4bf3-be54-b69ae40922e0
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:26:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:26:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/27/2025 23:32:26:DEBUG:ChannelConnectivity.IDLE
+07/27/2025 23:32:26:DEBUG:ChannelConnectivity.READY
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:26:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:26:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/27/2025 23:32:26:DEBUG:ChannelConnectivity.IDLE
+07/27/2025 23:32:26:DEBUG:ChannelConnectivity.CONNECTING
+07/27/2025 23:32:26:DEBUG:ChannelConnectivity.READY
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:27:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:27:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/27/2025 23:32:27:DEBUG:ChannelConnectivity.IDLE
+07/27/2025 23:32:27:DEBUG:ChannelConnectivity.READY
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:27:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/27/2025 23:32:27:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/27/2025 23:32:27:DEBUG:ChannelConnectivity.IDLE
+07/27/2025 23:32:27:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      Sent reply
+07/27/2025 23:32:30:INFO:Sent reply
+[92mINFO [0m:      Received initial parameters from one random client
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.7065317335478757, {'accuracy': 0.48509174311926606}
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/27/2025 23:33:01:INFO:
+[92mINFO [0m:      Received: train message 0dca0a9d-a47b-4c27-82d9-07979d1e51f5
+07/27/2025 23:33:01:INFO:Received: train message 0dca0a9d-a47b-4c27-82d9-07979d1e51f5
+[92mINFO [0m:      
+07/27/2025 23:33:02:INFO:
+[92mINFO [0m:      Received: train message 31e5d232-cc60-4447-90fa-60f0181a7b1d
+07/27/2025 23:33:02:INFO:Received: train message 31e5d232-cc60-4447-90fa-60f0181a7b1d
+[92mINFO [0m:      
+07/27/2025 23:33:09:INFO:
+[92mINFO [0m:      Received: train message 1547485b-ad43-44a5-aaa0-f128cc2505c0
+07/27/2025 23:33:09:INFO:Received: train message 1547485b-ad43-44a5-aaa0-f128cc2505c0
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the smallest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      
+07/27/2025 23:33:12:INFO:
+[92mINFO [0m:      Received: train message 8afdfb77-5e3e-478f-86c7-ac277c8c3dec
+07/27/2025 23:33:12:INFO:Received: train message 8afdfb77-5e3e-478f-86c7-ac277c8c3dec
+[92mINFO [0m:      
+07/27/2025 23:33:12:INFO:
+[92mINFO [0m:      Received: train message d466fc2c-49fa-415c-ba15-addc8208e5f7
+07/27/2025 23:33:12:INFO:Received: train message d466fc2c-49fa-415c-ba15-addc8208e5f7
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the smallest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+07/27/2025 23:51:03:INFO:Sent reply
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the smallest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the smallest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the smallest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the smallest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+07/27/2025 23:51:10:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/27/2025 23:51:11:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/27/2025 23:51:12:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/27/2025 23:51:13:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (1, 0.7333281729199471, {'accuracy': 0.2603211009174312}, 1134.1155360080302)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/27/2025 23:51:56:INFO:
+[92mINFO [0m:      Received: evaluate message b997587f-8628-45cb-a3f4-763bb2c21b2f
+07/27/2025 23:51:56:INFO:Received: evaluate message b997587f-8628-45cb-a3f4-763bb2c21b2f
+[92mINFO [0m:      
+07/27/2025 23:51:58:INFO:
+[92mINFO [0m:      Received: evaluate message 957aa43f-48d2-4e80-bc47-23d66bf7f69a
+07/27/2025 23:51:58:INFO:Received: evaluate message 957aa43f-48d2-4e80-bc47-23d66bf7f69a
+[92mINFO [0m:      
+07/27/2025 23:52:02:INFO:
+[92mINFO [0m:      Received: evaluate message b08eb78e-f646-44b3-9374-fa7a87160a9c
+07/27/2025 23:52:02:INFO:Received: evaluate message b08eb78e-f646-44b3-9374-fa7a87160a9c
+[92mINFO [0m:      
+07/27/2025 23:52:06:INFO:
+[92mINFO [0m:      Received: evaluate message e5157d03-ef35-4d16-aec4-9791931ad1b6
+07/27/2025 23:52:06:INFO:Received: evaluate message e5157d03-ef35-4d16-aec4-9791931ad1b6
+[92mINFO [0m:      
+07/27/2025 23:52:08:INFO:
+[92mINFO [0m:      Received: evaluate message 528c8135-8821-49b3-be96-3c34a40729cb
+07/27/2025 23:52:08:INFO:Received: evaluate message 528c8135-8821-49b3-be96-3c34a40729cb
+[92mINFO [0m:      Sent reply
+07/27/2025 23:55:57:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/27/2025 23:56:03:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/27/2025 23:56:08:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/27/2025 23:56:08:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/27/2025 23:56:08:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/27/2025 23:56:22:INFO:
+[92mINFO [0m:      Received: train message dcee7b37-2c86-4ab4-a8a0-efb48e6734e5
+07/27/2025 23:56:22:INFO:Received: train message dcee7b37-2c86-4ab4-a8a0-efb48e6734e5
+[92mINFO [0m:      
+07/27/2025 23:56:22:INFO:
+[92mINFO [0m:      Received: train message 0ad686d7-11f9-4eb1-b830-d31c3efea13b
+07/27/2025 23:56:22:INFO:Received: train message 0ad686d7-11f9-4eb1-b830-d31c3efea13b
+[92mINFO [0m:      
+07/27/2025 23:56:29:INFO:
+[92mINFO [0m:      Received: train message b93cad82-0ab0-4a35-be30-e8daed58306a
+07/27/2025 23:56:29:INFO:Received: train message b93cad82-0ab0-4a35-be30-e8daed58306a
+[92mINFO [0m:      
+07/27/2025 23:56:32:INFO:
+[92mINFO [0m:      Received: train message f6dfdc05-42b0-43d8-8c2f-f05a64f57208
+07/27/2025 23:56:32:INFO:Received: train message f6dfdc05-42b0-43d8-8c2f-f05a64f57208
+[92mINFO [0m:      
+07/27/2025 23:56:33:INFO:
+[92mINFO [0m:      Received: train message d0783abe-25b4-4a6c-815e-01d226340c39
+07/27/2025 23:56:33:INFO:Received: train message d0783abe-25b4-4a6c-815e-01d226340c39
+[92mINFO [0m:      Sent reply
+07/28/2025 00:14:21:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:14:27:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:14:29:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:14:30:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:14:31:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (2, 0.8689987889123619, {'accuracy': 0.19610091743119265}, 2536.9270126010524)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 00:15:12:INFO:
+[92mINFO [0m:      Received: evaluate message b8fa40ae-1fea-4459-8759-d9a5de0e24c1
+07/28/2025 00:15:12:INFO:Received: evaluate message b8fa40ae-1fea-4459-8759-d9a5de0e24c1
+[92mINFO [0m:      
+07/28/2025 00:15:17:INFO:
+[92mINFO [0m:      Received: evaluate message 71b99383-f765-4935-819a-afbdbc385c1a
+07/28/2025 00:15:17:INFO:Received: evaluate message 71b99383-f765-4935-819a-afbdbc385c1a
+[92mINFO [0m:      
+07/28/2025 00:15:20:INFO:
+[92mINFO [0m:      Received: evaluate message 1dfc3d73-2956-47f8-b709-836b8febe2df
+07/28/2025 00:15:20:INFO:Received: evaluate message 1dfc3d73-2956-47f8-b709-836b8febe2df
+[92mINFO [0m:      
+07/28/2025 00:15:24:INFO:
+[92mINFO [0m:      Received: evaluate message d132b8fa-7692-49c2-a37f-ec23d8249cf5
+07/28/2025 00:15:24:INFO:Received: evaluate message d132b8fa-7692-49c2-a37f-ec23d8249cf5
+[92mINFO [0m:      
+07/28/2025 00:15:29:INFO:
+[92mINFO [0m:      Received: evaluate message 81fa9566-1547-461f-a81b-47bd4478444a
+07/28/2025 00:15:29:INFO:Received: evaluate message 81fa9566-1547-461f-a81b-47bd4478444a
+[92mINFO [0m:      Sent reply
+07/28/2025 00:19:17:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:19:24:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:19:28:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:19:31:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:19:32:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 00:19:43:INFO:
+[92mINFO [0m:      Received: train message 3cb133de-e58d-48fd-9096-7e2615ed9cfa
+07/28/2025 00:19:43:INFO:Received: train message 3cb133de-e58d-48fd-9096-7e2615ed9cfa
+[92mINFO [0m:      
+07/28/2025 00:19:46:INFO:
+[92mINFO [0m:      Received: train message ebd10bc8-eba5-4bd5-94e5-f9bc962786da
+07/28/2025 00:19:46:INFO:Received: train message ebd10bc8-eba5-4bd5-94e5-f9bc962786da
+[92mINFO [0m:      
+07/28/2025 00:19:55:INFO:
+[92mINFO [0m:      Received: train message 1cdcf28a-d6fd-4851-9c3c-f6386e21515a
+07/28/2025 00:19:55:INFO:Received: train message 1cdcf28a-d6fd-4851-9c3c-f6386e21515a
+[92mINFO [0m:      
+07/28/2025 00:19:55:INFO:
+[92mINFO [0m:      Received: train message c965e4af-d459-438c-81a2-24404005e05d
+07/28/2025 00:19:55:INFO:Received: train message c965e4af-d459-438c-81a2-24404005e05d
+[92mINFO [0m:      
+07/28/2025 00:19:56:INFO:
+[92mINFO [0m:      Received: train message dd1cc812-bbd7-462e-a8c7-8541d67389dd
+07/28/2025 00:19:56:INFO:Received: train message dd1cc812-bbd7-462e-a8c7-8541d67389dd
+[92mINFO [0m:      Sent reply
+07/28/2025 00:37:37:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:37:51:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:37:54:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:37:58:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:37:58:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (3, 0.5112559188396559, {'accuracy': 0.7878440366972477}, 3939.800862413016)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 00:38:39:INFO:
+[92mINFO [0m:      Received: evaluate message 0ef4b3f0-197e-4f1f-9b53-3eb082a64b0d
+07/28/2025 00:38:39:INFO:Received: evaluate message 0ef4b3f0-197e-4f1f-9b53-3eb082a64b0d
+[92mINFO [0m:      
+07/28/2025 00:38:40:INFO:
+[92mINFO [0m:      Received: evaluate message eab05997-5da5-4c6d-b649-fdebd0f51afd
+07/28/2025 00:38:40:INFO:Received: evaluate message eab05997-5da5-4c6d-b649-fdebd0f51afd
+[92mINFO [0m:      
+07/28/2025 00:38:43:INFO:
+[92mINFO [0m:      Received: evaluate message 9d921a93-2c8a-4c59-b1c9-a523b367f1d7
+07/28/2025 00:38:43:INFO:Received: evaluate message 9d921a93-2c8a-4c59-b1c9-a523b367f1d7
+[92mINFO [0m:      
+07/28/2025 00:38:50:INFO:
+[92mINFO [0m:      Received: evaluate message 0d870a55-21bb-4802-afc6-5d5b0ab4c20c
+07/28/2025 00:38:50:INFO:Received: evaluate message 0d870a55-21bb-4802-afc6-5d5b0ab4c20c
+[92mINFO [0m:      
+07/28/2025 00:38:51:INFO:
+[92mINFO [0m:      Received: evaluate message 451e8bed-0b88-4ea3-9a7b-6d80aee82585
+07/28/2025 00:38:51:INFO:Received: evaluate message 451e8bed-0b88-4ea3-9a7b-6d80aee82585
+[92mINFO [0m:      Sent reply
+07/28/2025 00:42:47:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:42:48:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:42:53:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:42:57:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 00:42:58:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 4]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 00:43:09:INFO:
+[92mINFO [0m:      Received: train message 24c66199-9291-414b-bff4-6d4add4156a8
+07/28/2025 00:43:09:INFO:Received: train message 24c66199-9291-414b-bff4-6d4add4156a8
+[92mINFO [0m:      
+07/28/2025 00:43:13:INFO:
+[92mINFO [0m:      Received: train message 44cde45c-071d-4dd7-9573-12e5b4fb484e
+07/28/2025 00:43:13:INFO:Received: train message 44cde45c-071d-4dd7-9573-12e5b4fb484e
+[92mINFO [0m:      
+07/28/2025 00:43:17:INFO:
+[92mINFO [0m:      Received: train message 7c783b9b-ffde-44a8-bba8-e4fcaf5fdc27
+07/28/2025 00:43:17:INFO:Received: train message 7c783b9b-ffde-44a8-bba8-e4fcaf5fdc27
+[92mINFO [0m:      
+07/28/2025 00:43:19:INFO:
+[92mINFO [0m:      Received: train message f5facc5a-468d-4181-8dfa-d10ed23cdc68
+07/28/2025 00:43:19:INFO:Received: train message f5facc5a-468d-4181-8dfa-d10ed23cdc68
+[92mINFO [0m:      
+07/28/2025 00:43:23:INFO:
+[92mINFO [0m:      Received: train message aa283aa1-03c6-4fc9-a2b0-0cb0f4c577c9
+07/28/2025 00:43:23:INFO:Received: train message aa283aa1-03c6-4fc9-a2b0-0cb0f4c577c9
+[92mINFO [0m:      Sent reply
+07/28/2025 01:01:11:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:01:13:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:01:14:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:01:15:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:01:16:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (4, 0.6311194289714919, {'accuracy': 0.7912844036697247}, 5332.901265935041)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 01:01:46:INFO:
+[92mINFO [0m:      Received: evaluate message 52676d5a-0e3b-4266-8825-3266d6881489
+07/28/2025 01:01:46:INFO:Received: evaluate message 52676d5a-0e3b-4266-8825-3266d6881489
+[92mINFO [0m:      
+07/28/2025 01:01:55:INFO:
+[92mINFO [0m:      Received: evaluate message 90347577-c6a6-497b-8a1d-fd3eda7d0423
+07/28/2025 01:01:55:INFO:Received: evaluate message 90347577-c6a6-497b-8a1d-fd3eda7d0423
+[92mINFO [0m:      
+07/28/2025 01:01:56:INFO:
+[92mINFO [0m:      Received: evaluate message 71f780e6-e939-4284-889c-5afafe3665e7
+07/28/2025 01:01:56:INFO:Received: evaluate message 71f780e6-e939-4284-889c-5afafe3665e7
+[92mINFO [0m:      
+07/28/2025 01:02:02:INFO:
+[92mINFO [0m:      Received: evaluate message beb9152f-01a0-4259-9cc4-f7a22f05e9a8
+07/28/2025 01:02:02:INFO:Received: evaluate message beb9152f-01a0-4259-9cc4-f7a22f05e9a8
+[92mINFO [0m:      
+07/28/2025 01:02:04:INFO:
+[92mINFO [0m:      Received: evaluate message dda51f36-bc45-4596-8212-3a19efff57f5
+07/28/2025 01:02:04:INFO:Received: evaluate message dda51f36-bc45-4596-8212-3a19efff57f5
+[92mINFO [0m:      Sent reply
+07/28/2025 01:05:48:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:05:55:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:06:00:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:06:04:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:06:07:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 5]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 01:06:21:INFO:
+[92mINFO [0m:      Received: train message ea45bce3-3c09-46d4-baad-aedf640d1396
+07/28/2025 01:06:21:INFO:Received: train message ea45bce3-3c09-46d4-baad-aedf640d1396
+[92mINFO [0m:      
+07/28/2025 01:06:28:INFO:
+[92mINFO [0m:      Received: train message 76f361c9-5294-4481-be40-b1d9cdf1a03b
+07/28/2025 01:06:28:INFO:Received: train message 76f361c9-5294-4481-be40-b1d9cdf1a03b
+[92mINFO [0m:      
+07/28/2025 01:06:30:INFO:
+[92mINFO [0m:      Received: train message 1ecc948f-9608-4196-adb1-92bbd344f0ee
+07/28/2025 01:06:30:INFO:Received: train message 1ecc948f-9608-4196-adb1-92bbd344f0ee
+[92mINFO [0m:      
+07/28/2025 01:06:30:INFO:
+[92mINFO [0m:      Received: train message 06e6893a-60f4-4491-b66f-6ead6bdb5bf7
+07/28/2025 01:06:30:INFO:Received: train message 06e6893a-60f4-4491-b66f-6ead6bdb5bf7
+[92mINFO [0m:      
+07/28/2025 01:06:33:INFO:
+[92mINFO [0m:      Received: train message 59d78d1b-f886-477f-bf2f-1ef429a29cef
+07/28/2025 01:06:33:INFO:Received: train message 59d78d1b-f886-477f-bf2f-1ef429a29cef
+[92mINFO [0m:      Sent reply
+07/28/2025 01:24:14:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:24:27:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:24:30:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:24:30:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:24:31:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (5, 0.5903840972742903, {'accuracy': 0.8130733944954128}, 6731.1791490090545)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 01:25:06:INFO:
+[92mINFO [0m:      Received: evaluate message 966cd0f9-bd25-471c-964a-3ce0721a5a1b
+07/28/2025 01:25:06:INFO:Received: evaluate message 966cd0f9-bd25-471c-964a-3ce0721a5a1b
+[92mINFO [0m:      
+07/28/2025 01:25:22:INFO:
+[92mINFO [0m:      Received: evaluate message 25971a84-5713-45aa-a768-12662e50faca
+07/28/2025 01:25:22:INFO:Received: evaluate message 25971a84-5713-45aa-a768-12662e50faca
+[92mINFO [0m:      
+07/28/2025 01:25:23:INFO:
+[92mINFO [0m:      Received: evaluate message f38c10bb-7a6d-4dd6-9792-aa5289f0cf67
+07/28/2025 01:25:23:INFO:Received: evaluate message f38c10bb-7a6d-4dd6-9792-aa5289f0cf67
+[92mINFO [0m:      
+07/28/2025 01:25:23:INFO:
+[92mINFO [0m:      Received: evaluate message cc48951a-13a2-47eb-a34c-9542057510e8
+07/28/2025 01:25:23:INFO:Received: evaluate message cc48951a-13a2-47eb-a34c-9542057510e8
+[92mINFO [0m:      
+07/28/2025 01:25:23:INFO:
+[92mINFO [0m:      Received: evaluate message 2fddbac6-0243-4b4f-8bfc-158ab50c9a40
+07/28/2025 01:25:23:INFO:Received: evaluate message 2fddbac6-0243-4b4f-8bfc-158ab50c9a40
+[92mINFO [0m:      Sent reply
+07/28/2025 01:28:54:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:29:23:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:29:25:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:29:25:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:29:26:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 6]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 01:29:46:INFO:
+[92mINFO [0m:      Received: train message 9f059e0e-b891-47d7-8cd1-d6157e0df14d
+07/28/2025 01:29:46:INFO:Received: train message 9f059e0e-b891-47d7-8cd1-d6157e0df14d
+[92mINFO [0m:      
+07/28/2025 01:29:47:INFO:
+[92mINFO [0m:      Received: train message de4d180f-3ece-4e6c-a831-2c71ff0e4684
+07/28/2025 01:29:47:INFO:Received: train message de4d180f-3ece-4e6c-a831-2c71ff0e4684
+[92mINFO [0m:      
+07/28/2025 01:29:48:INFO:
+[92mINFO [0m:      Received: train message d68e065b-9236-4ef2-8e00-bea33a8f6531
+07/28/2025 01:29:48:INFO:Received: train message d68e065b-9236-4ef2-8e00-bea33a8f6531
+[92mINFO [0m:      
+07/28/2025 01:29:48:INFO:
+[92mINFO [0m:      Received: train message df18f2db-fd7c-4048-b6a6-b6948aeb20d2
+07/28/2025 01:29:48:INFO:Received: train message df18f2db-fd7c-4048-b6a6-b6948aeb20d2
+[92mINFO [0m:      
+07/28/2025 01:29:50:INFO:
+[92mINFO [0m:      Received: train message 37a39784-05fe-4d13-ad31-595b3db7d9c3
+07/28/2025 01:29:50:INFO:Received: train message 37a39784-05fe-4d13-ad31-595b3db7d9c3
+[92mINFO [0m:      Sent reply
+07/28/2025 01:47:41:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:47:48:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:47:48:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:47:50:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:47:54:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (6, 0.6226323143057867, {'accuracy': 0.7626146788990825}, 8135.177153806086)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 01:48:36:INFO:
+[92mINFO [0m:      Received: evaluate message 33b1a308-432a-49ec-aae7-11e9eb110610
+07/28/2025 01:48:36:INFO:Received: evaluate message 33b1a308-432a-49ec-aae7-11e9eb110610
+[92mINFO [0m:      
+07/28/2025 01:48:40:INFO:
+[92mINFO [0m:      Received: evaluate message 95df9d3c-f702-46e8-85f8-20780a52526d
+07/28/2025 01:48:40:INFO:Received: evaluate message 95df9d3c-f702-46e8-85f8-20780a52526d
+[92mINFO [0m:      
+07/28/2025 01:48:43:INFO:
+[92mINFO [0m:      Received: evaluate message af29bf29-1a11-437d-b25a-35083a9783d6
+07/28/2025 01:48:43:INFO:Received: evaluate message af29bf29-1a11-437d-b25a-35083a9783d6
+[92mINFO [0m:      
+07/28/2025 01:48:49:INFO:
+[92mINFO [0m:      Received: evaluate message c0d3654f-7d79-464a-a363-7948b94cf0ab
+07/28/2025 01:48:49:INFO:Received: evaluate message c0d3654f-7d79-464a-a363-7948b94cf0ab
+[92mINFO [0m:      
+07/28/2025 01:48:49:INFO:
+[92mINFO [0m:      Received: evaluate message 251b4ba3-4204-49d2-8020-7eb190f6cac7
+07/28/2025 01:48:49:INFO:Received: evaluate message 251b4ba3-4204-49d2-8020-7eb190f6cac7
+[92mINFO [0m:      Sent reply
+07/28/2025 01:52:35:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:52:47:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:52:50:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:52:52:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 01:52:54:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 7]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 01:53:17:INFO:
+[92mINFO [0m:      Received: train message c2b0eea2-4a2e-42ce-9515-995277dab76b
+07/28/2025 01:53:17:INFO:Received: train message c2b0eea2-4a2e-42ce-9515-995277dab76b
+[92mINFO [0m:      
+07/28/2025 01:53:17:INFO:
+[92mINFO [0m:      Received: train message b7c2da5f-7fa5-459a-b4a9-587f6822f3a0
+07/28/2025 01:53:17:INFO:Received: train message b7c2da5f-7fa5-459a-b4a9-587f6822f3a0
+[92mINFO [0m:      
+07/28/2025 01:53:18:INFO:
+[92mINFO [0m:      Received: train message 46355989-da25-4f3a-84f6-a454e2ee7af0
+07/28/2025 01:53:18:INFO:Received: train message 46355989-da25-4f3a-84f6-a454e2ee7af0
+[92mINFO [0m:      
+07/28/2025 01:53:19:INFO:
+[92mINFO [0m:      Received: train message 2e404310-2a5c-455f-8433-abf6e14b87e9
+07/28/2025 01:53:19:INFO:Received: train message 2e404310-2a5c-455f-8433-abf6e14b87e9
+[92mINFO [0m:      
+07/28/2025 01:53:20:INFO:
+[92mINFO [0m:      Received: train message 0937c80f-28d7-4e0c-abd3-8b68aa045bb2
+07/28/2025 01:53:20:INFO:Received: train message 0937c80f-28d7-4e0c-abd3-8b68aa045bb2
+[92mINFO [0m:      Sent reply
+07/28/2025 02:11:21:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:11:22:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:11:24:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:11:26:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:11:26:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (7, 0.7973547151329321, {'accuracy': 0.18807339449541285}, 9550.801298363018)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 02:12:13:INFO:
+[92mINFO [0m:      Received: evaluate message 2b7507e5-8a2a-4d55-8ec6-221bf65ab232
+07/28/2025 02:12:13:INFO:Received: evaluate message 2b7507e5-8a2a-4d55-8ec6-221bf65ab232
+[92mINFO [0m:      
+07/28/2025 02:12:18:INFO:
+[92mINFO [0m:      Received: evaluate message 9e7f6841-6d9d-450c-bcd9-9b9b846fc8a6
+07/28/2025 02:12:18:INFO:Received: evaluate message 9e7f6841-6d9d-450c-bcd9-9b9b846fc8a6
+[92mINFO [0m:      
+07/28/2025 02:12:18:INFO:
+[92mINFO [0m:      Received: evaluate message 554b612c-e783-435b-bbfa-22e0a2267928
+07/28/2025 02:12:18:INFO:Received: evaluate message 554b612c-e783-435b-bbfa-22e0a2267928
+[92mINFO [0m:      
+07/28/2025 02:12:19:INFO:
+[92mINFO [0m:      Received: evaluate message 638f3c44-2ccc-485d-8df4-b6dd5de058d9
+07/28/2025 02:12:19:INFO:Received: evaluate message 638f3c44-2ccc-485d-8df4-b6dd5de058d9
+[92mINFO [0m:      
+07/28/2025 02:12:23:INFO:
+[92mINFO [0m:      Received: evaluate message 068d74d5-96c1-4c1e-a374-251aa5d42b97
+07/28/2025 02:12:23:INFO:Received: evaluate message 068d74d5-96c1-4c1e-a374-251aa5d42b97
+[92mINFO [0m:      Sent reply
+07/28/2025 02:16:10:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:16:19:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:16:21:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:16:25:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:16:26:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 8]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 02:16:38:INFO:
+[92mINFO [0m:      Received: train message 9735b7c3-e572-412e-ae6c-6bd2a8163158
+07/28/2025 02:16:38:INFO:Received: train message 9735b7c3-e572-412e-ae6c-6bd2a8163158
+[92mINFO [0m:      
+07/28/2025 02:16:47:INFO:
+[92mINFO [0m:      Received: train message 2e2574e9-f658-4d04-9949-10b124f7a2a1
+07/28/2025 02:16:47:INFO:Received: train message 2e2574e9-f658-4d04-9949-10b124f7a2a1
+[92mINFO [0m:      
+07/28/2025 02:16:50:INFO:
+[92mINFO [0m:      Received: train message f269098c-bfe0-4cc5-b822-9afdbb8f3819
+07/28/2025 02:16:50:INFO:Received: train message f269098c-bfe0-4cc5-b822-9afdbb8f3819
+[92mINFO [0m:      
+07/28/2025 02:16:51:INFO:
+[92mINFO [0m:      Received: train message a00ca12c-8769-41e2-a780-c47aa6c881fe
+07/28/2025 02:16:51:INFO:Received: train message a00ca12c-8769-41e2-a780-c47aa6c881fe
+[92mINFO [0m:      
+07/28/2025 02:16:52:INFO:
+[92mINFO [0m:      Received: train message 5ae14409-f33e-4d07-9a86-fd71e7daa51c
+07/28/2025 02:16:52:INFO:Received: train message 5ae14409-f33e-4d07-9a86-fd71e7daa51c
+[92mINFO [0m:      Sent reply
+07/28/2025 02:33:55:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:34:14:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:34:23:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:34:25:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:34:35:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (8, 0.5761647530651968, {'accuracy': 0.7981651376146789}, 10939.343307969044)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 02:35:16:INFO:
+[92mINFO [0m:      Received: evaluate message 77694c70-aaca-4a79-8ba6-5c4301a264c7
+07/28/2025 02:35:16:INFO:Received: evaluate message 77694c70-aaca-4a79-8ba6-5c4301a264c7
+[92mINFO [0m:      
+07/28/2025 02:35:23:INFO:
+[92mINFO [0m:      Received: evaluate message 1a288222-dba9-43f8-a436-5698a5cea267
+07/28/2025 02:35:23:INFO:Received: evaluate message 1a288222-dba9-43f8-a436-5698a5cea267
+[92mINFO [0m:      
+07/28/2025 02:35:25:INFO:
+[92mINFO [0m:      Received: evaluate message 13ed450e-5dc5-40e9-b114-0db3fb1f1ebc
+07/28/2025 02:35:25:INFO:Received: evaluate message 13ed450e-5dc5-40e9-b114-0db3fb1f1ebc
+[92mINFO [0m:      
+07/28/2025 02:35:31:INFO:
+[92mINFO [0m:      Received: evaluate message 41e190c8-83c1-41c9-8b25-cbb0e6908b90
+07/28/2025 02:35:31:INFO:Received: evaluate message 41e190c8-83c1-41c9-8b25-cbb0e6908b90
+[92mINFO [0m:      
+07/28/2025 02:35:32:INFO:
+[92mINFO [0m:      Received: evaluate message 237cfc3e-cab8-4f25-a164-491b3db1b21d
+07/28/2025 02:35:32:INFO:Received: evaluate message 237cfc3e-cab8-4f25-a164-491b3db1b21d
+[92mINFO [0m:      Sent reply
+07/28/2025 02:39:08:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:39:18:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:39:26:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:39:29:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:39:30:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 9]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 02:39:47:INFO:
+[92mINFO [0m:      Received: train message 5a128700-96b4-4779-9b2d-2de32bb1414a
+07/28/2025 02:39:47:INFO:Received: train message 5a128700-96b4-4779-9b2d-2de32bb1414a
+[92mINFO [0m:      
+07/28/2025 02:39:53:INFO:
+[92mINFO [0m:      Received: train message cbf12b24-12c3-4b5e-9900-7a87afe696db
+07/28/2025 02:39:53:INFO:Received: train message cbf12b24-12c3-4b5e-9900-7a87afe696db
+[92mINFO [0m:      
+07/28/2025 02:39:53:INFO:
+[92mINFO [0m:      Received: train message a61dbfca-dbc5-4bda-a2cc-556da2a2db68
+07/28/2025 02:39:53:INFO:Received: train message a61dbfca-dbc5-4bda-a2cc-556da2a2db68
+[92mINFO [0m:      
+07/28/2025 02:39:54:INFO:
+[92mINFO [0m:      Received: train message 11259676-91f4-4da9-a9d7-32ac85059f4f
+07/28/2025 02:39:54:INFO:Received: train message 11259676-91f4-4da9-a9d7-32ac85059f4f
+[92mINFO [0m:      
+07/28/2025 02:39:54:INFO:
+[92mINFO [0m:      Received: train message 69f2d2d9-c4c6-4718-9219-e9f8b7d3421e
+07/28/2025 02:39:54:INFO:Received: train message 69f2d2d9-c4c6-4718-9219-e9f8b7d3421e
+[92mINFO [0m:      Sent reply
+07/28/2025 02:57:26:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:57:38:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:57:43:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:57:55:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 02:58:02:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (9, 0.5823041780279317, {'accuracy': 0.7981651376146789}, 12346.662978367996)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 02:58:47:INFO:
+[92mINFO [0m:      Received: evaluate message b8bb48b0-830b-4243-8fdd-503a05c5b31b
+07/28/2025 02:58:47:INFO:Received: evaluate message b8bb48b0-830b-4243-8fdd-503a05c5b31b
+[92mINFO [0m:      
+07/28/2025 02:58:47:INFO:
+[92mINFO [0m:      Received: evaluate message 2d65cd68-b37b-4313-b15c-54fcaf87362a
+07/28/2025 02:58:47:INFO:Received: evaluate message 2d65cd68-b37b-4313-b15c-54fcaf87362a
+[92mINFO [0m:      
+07/28/2025 02:58:49:INFO:
+[92mINFO [0m:      Received: evaluate message 94e9068e-9b73-43e4-a297-f8ddf6d9e361
+07/28/2025 02:58:49:INFO:Received: evaluate message 94e9068e-9b73-43e4-a297-f8ddf6d9e361
+[92mINFO [0m:      
+07/28/2025 02:58:56:INFO:
+[92mINFO [0m:      Received: evaluate message 69806646-1557-4bd3-beb3-c4dd6c3973f3
+07/28/2025 02:58:56:INFO:Received: evaluate message 69806646-1557-4bd3-beb3-c4dd6c3973f3
+[92mINFO [0m:      
+07/28/2025 02:58:57:INFO:
+[92mINFO [0m:      Received: evaluate message a5e340da-c7d2-473b-8fb3-a5759aa659b5
+07/28/2025 02:58:57:INFO:Received: evaluate message a5e340da-c7d2-473b-8fb3-a5759aa659b5
+[92mINFO [0m:      Sent reply
+07/28/2025 03:02:46:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:02:48:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:02:52:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:02:56:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:02:57:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 10]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 03:03:10:INFO:
+[92mINFO [0m:      Received: train message 87c27a5c-a4d8-4a19-be02-170a98ea0a41
+07/28/2025 03:03:10:INFO:Received: train message 87c27a5c-a4d8-4a19-be02-170a98ea0a41
+[92mINFO [0m:      
+07/28/2025 03:03:14:INFO:
+[92mINFO [0m:      Received: train message ab724ae2-173a-4a23-af87-036819d75437
+07/28/2025 03:03:14:INFO:Received: train message ab724ae2-173a-4a23-af87-036819d75437
+[92mINFO [0m:      
+07/28/2025 03:03:19:INFO:
+[92mINFO [0m:      Received: train message d0979911-6c9c-4d15-8dd7-752cd835a0d7
+07/28/2025 03:03:19:INFO:Received: train message d0979911-6c9c-4d15-8dd7-752cd835a0d7
+[92mINFO [0m:      
+07/28/2025 03:03:22:INFO:
+[92mINFO [0m:      Received: train message 19f400f8-d63d-4a37-b845-388577033b8b
+07/28/2025 03:03:22:INFO:Received: train message 19f400f8-d63d-4a37-b845-388577033b8b
+[92mINFO [0m:      
+07/28/2025 03:03:23:INFO:
+[92mINFO [0m:      Received: train message 00ae220a-f2e2-4f08-9b13-db93f6691721
+07/28/2025 03:03:23:INFO:Received: train message 00ae220a-f2e2-4f08-9b13-db93f6691721
+[92mINFO [0m:      Sent reply
+07/28/2025 03:20:31:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:20:47:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:20:47:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:20:53:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:21:08:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (10, 0.5623603381148172, {'accuracy': 0.8119266055045872}, 13733.808835701086)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/28/2025 03:21:55:INFO:
+[92mINFO [0m:      Received: evaluate message 19f74ce3-bbbc-437a-9682-f6790f274121
+07/28/2025 03:21:55:INFO:Received: evaluate message 19f74ce3-bbbc-437a-9682-f6790f274121
+[92mINFO [0m:      
+07/28/2025 03:21:59:INFO:
+[92mINFO [0m:      Received: evaluate message 110ac15b-a495-4408-b849-3acd7c719ecf
+07/28/2025 03:21:59:INFO:Received: evaluate message 110ac15b-a495-4408-b849-3acd7c719ecf
+[92mINFO [0m:      
+07/28/2025 03:22:04:INFO:
+[92mINFO [0m:      Received: evaluate message 3fc4938b-e535-4ea2-9615-78c0bf14133e
+07/28/2025 03:22:04:INFO:Received: evaluate message 3fc4938b-e535-4ea2-9615-78c0bf14133e
+[92mINFO [0m:      
+07/28/2025 03:22:04:INFO:
+[92mINFO [0m:      Received: evaluate message 5f7da4a5-a7f6-4c93-b682-485b89966e24
+07/28/2025 03:22:04:INFO:Received: evaluate message 5f7da4a5-a7f6-4c93-b682-485b89966e24
+[92mINFO [0m:      
+07/28/2025 03:22:06:INFO:
+[92mINFO [0m:      Received: evaluate message dda61ebc-a2b2-464d-ae61-70bc05098a5d
+07/28/2025 03:22:06:INFO:Received: evaluate message dda61ebc-a2b2-464d-ae61-70bc05098a5d
+[92mINFO [0m:      Sent reply
+07/28/2025 03:25:53:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:26:07:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:26:08:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:26:09:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/28/2025 03:26:10:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [SUMMARY]
+[92mINFO [0m:      Run finished 10 round(s) in 14002.81s
+[92mINFO [0m:      	History (loss, distributed):
+[92mINFO [0m:      		round 1: 0.3071645140065991
+[92mINFO [0m:      		round 2: 0.2696149699125398
+[92mINFO [0m:      		round 3: 0.25634599127817526
+[92mINFO [0m:      		round 4: 0.2568564888162287
+[92mINFO [0m:      		round 5: 0.2580750108442234
+[92mINFO [0m:      		round 6: 0.26091589470441473
+[92mINFO [0m:      		round 7: 0.2632763389915681
+[92mINFO [0m:      		round 8: 0.2755727232366529
+[92mINFO [0m:      		round 9: 0.28488715650372476
+[92mINFO [0m:      		round 10: 0.28471092853747215
+[92mINFO [0m:      	History (loss, centralized):
+[92mINFO [0m:      		round 0: 0.7065317335478757
+[92mINFO [0m:      		round 1: 0.7333281729199471
+[92mINFO [0m:      		round 2: 0.8689987889123619
+[92mINFO [0m:      		round 3: 0.5112559188396559
+[92mINFO [0m:      		round 4: 0.6311194289714919
+[92mINFO [0m:      		round 5: 0.5903840972742903
+[92mINFO [0m:      		round 6: 0.6226323143057867
+[92mINFO [0m:      		round 7: 0.7973547151329321
+[92mINFO [0m:      		round 8: 0.5761647530651968
+[92mINFO [0m:      		round 9: 0.5823041780279317
+[92mINFO [0m:      		round 10: 0.5623603381148172
+[92mINFO [0m:      	History (metrics, distributed, fit):
+[92mINFO [0m:      	{'accuracy': [(1, 0.8536968639609719),
+[92mINFO [0m:      	              (2, 0.8952591300266598),
+[92mINFO [0m:      	              (3, 0.8981668801093711),
+[92mINFO [0m:      	              (4, 0.8959396672795189),
+[92mINFO [0m:      	              (5, 0.8932670118853926),
+[92mINFO [0m:      	              (6, 0.8910212389497405),
+[92mINFO [0m:      	              (7, 0.8899694995594946),
+[92mINFO [0m:      	              (8, 0.8885403713266097),
+[92mINFO [0m:      	              (9, 0.885812035611396),
+[92mINFO [0m:      	              (10, 0.8839560249207744)],
+[92mINFO [0m:      	 'loss': [(1, 0.3786229971932616),
+[92mINFO [0m:      	          (2, 0.29492383034396835),
+[92mINFO [0m:      	          (3, 0.2781392112919143),
+[92mINFO [0m:      	          (4, 0.2827426247251978),
+[92mINFO [0m:      	          (5, 0.2852592470098816),
+[92mINFO [0m:      	          (6, 0.29143673269116865),
+[92mINFO [0m:      	          (7, 0.2928940562894957),
+[92mINFO [0m:      	          (8, 0.2980578493816853),
+[92mINFO [0m:      	          (9, 0.3039326379755253),
+[92mINFO [0m:      	          (10, 0.30246774286995654)]}
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'accuracy': [(1, 0.8937805081768334),
+[92mINFO [0m:      	              (2, 0.9092967575504297),
+[92mINFO [0m:      	              (3, 0.9138254236355464),
+[92mINFO [0m:      	              (4, 0.9149019098350006),
+[92mINFO [0m:      	              (5, 0.9118580523023813),
+[92mINFO [0m:      	              (6, 0.9111713283479576),
+[92mINFO [0m:      	              (7, 0.9096122793667292),
+[92mINFO [0m:      	              (8, 0.9084429926316375),
+[92mINFO [0m:      	              (9, 0.9052506542448747),
+[92mINFO [0m:      	              (10, 0.9037101653705525)],
+[92mINFO [0m:      	 'loss': [(1, 0.3071645164128024),
+[92mINFO [0m:      	          (2, 0.2696149666460744),
+[92mINFO [0m:      	          (3, 0.25634599575966927),
+[92mINFO [0m:      	          (4, 0.2568564911771787),
+[92mINFO [0m:      	          (5, 0.25807501017026385),
+[92mINFO [0m:      	          (6, 0.26091589317804065),
+[92mINFO [0m:      	          (7, 0.26327633800664335),
+[92mINFO [0m:      	          (8, 0.27557271534332284),
+[92mINFO [0m:      	          (9, 0.2848871640753726),
+[92mINFO [0m:      	          (10, 0.2847109305210463)]}
+[92mINFO [0m:      	History (metrics, centralized):
+[92mINFO [0m:      	{'accuracy': [(0, 0.48509174311926606),
+[92mINFO [0m:      	              (1, 0.2603211009174312),
+[92mINFO [0m:      	              (2, 0.19610091743119265),
+[92mINFO [0m:      	              (3, 0.7878440366972477),
+[92mINFO [0m:      	              (4, 0.7912844036697247),
+[92mINFO [0m:      	              (5, 0.8130733944954128),
+[92mINFO [0m:      	              (6, 0.7626146788990825),
+[92mINFO [0m:      	              (7, 0.18807339449541285),
+[92mINFO [0m:      	              (8, 0.7981651376146789),
+[92mINFO [0m:      	              (9, 0.7981651376146789),
+[92mINFO [0m:      	              (10, 0.8119266055045872)]}
+[92mINFO [0m:      
+[92mINFO [0m:      
+07/28/2025 03:26:10:INFO:
+[92mINFO [0m:      Received: reconnect message fbfb494f-cd18-4a38-a6a2-d5b70d804f39
+07/28/2025 03:26:10:INFO:Received: reconnect message fbfb494f-cd18-4a38-a6a2-d5b70d804f39
+[92mINFO [0m:      
+07/28/2025 03:26:10:INFO:
+[92mINFO [0m:      Received: reconnect message 2dd9f46b-0f83-4648-93bd-a2026fda0d22
+07/28/2025 03:26:10:INFO:Received: reconnect message 2dd9f46b-0f83-4648-93bd-a2026fda0d22
+[92mINFO [0m:      
+07/28/2025 03:26:10:INFO:
+[92mINFO [0m:      Received: reconnect message 9f73b507-b063-4a21-9c2a-6fb74a94a4aa
+07/28/2025 03:26:10:INFO:Received: reconnect message 9f73b507-b063-4a21-9c2a-6fb74a94a4aa
+[92mINFO [0m:      
+07/28/2025 03:26:10:INFO:
+[92mINFO [0m:      Received: reconnect message 71ec04a9-cd9e-41bf-bd5c-deb46ba9a17c
+07/28/2025 03:26:10:INFO:Received: reconnect message 71ec04a9-cd9e-41bf-bd5c-deb46ba9a17c
+[92mINFO [0m:      
+07/28/2025 03:26:10:INFO:
+[92mINFO [0m:      Received: reconnect message b390a0ac-da58-4e99-a0a6-3b1d54aa4466
+07/28/2025 03:26:10:INFO:Received: reconnect message b390a0ac-da58-4e99-a0a6-3b1d54aa4466
+07/28/2025 03:26:10:DEBUG:gRPC channel closed
+07/28/2025 03:26:10:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+07/28/2025 03:26:10:INFO:Disconnect and shut down
+07/28/2025 03:26:10:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+07/28/2025 03:26:10:DEBUG:gRPC channel closed
+07/28/2025 03:26:10:INFO:Disconnect and shut down
+07/28/2025 03:26:10:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+07/28/2025 03:26:10:INFO:Disconnect and shut down
+[92mINFO [0m:      Disconnect and shut down
+07/28/2025 03:26:10:INFO:Disconnect and shut down
+[92mINFO [0m:      Disconnect and shut down
+07/28/2025 03:26:10:INFO:Disconnect and shut down
+Using split_pb2 from: /a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-learning/clients/grpc_generated/split_pb2.py
+Using split_pb2 from: /a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-learning/clients/grpc_generated/split_pb2.py
+Using split_pb2 from: /a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-learning/clients/grpc_generated/split_pb2.py
+Using split_pb2 from: /a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-learning/clients/grpc_generated/split_pb2.py
+Using split_pb2 from: /a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-learning/clients/grpc_generated/split_pb2.py
+[Central Evaluation] Loss: 0.7065, Accuracy: 0.4851
+[Client Training Aggregated] Loss: 0.3786, Accuracy: 0.8537
+[Central Evaluation] Loss: 0.7622, Accuracy: 0.2362
+[Central Evaluation] Loss: 0.7333, Accuracy: 0.2603
+[Client Evaluation Aggregated] Loss: 0.3072, Accuracy: 0.8938
+[Client Training Aggregated] Loss: 0.2949, Accuracy: 0.8953
+[Central Evaluation] Loss: 0.5645, Accuracy: 0.7580
+[Central Evaluation] Loss: 0.8690, Accuracy: 0.1961
+[Client Evaluation Aggregated] Loss: 0.2696, Accuracy: 0.9093
+[Client Training Aggregated] Loss: 0.2781, Accuracy: 0.8982
+[Central Evaluation] Loss: 0.5698, Accuracy: 0.7534
+[Central Evaluation] Loss: 0.5113, Accuracy: 0.7878
+[Client Evaluation Aggregated] Loss: 0.2563, Accuracy: 0.9138
+[Client Training Aggregated] Loss: 0.2827, Accuracy: 0.8959
+[Central Evaluation] Loss: 0.6890, Accuracy: 0.5310
+[Central Evaluation] Loss: 0.6311, Accuracy: 0.7913
+[Client Evaluation Aggregated] Loss: 0.2569, Accuracy: 0.9149
+[Client Training Aggregated] Loss: 0.2853, Accuracy: 0.8933
+[Central Evaluation] Loss: 0.8142, Accuracy: 0.2156
+[Central Evaluation] Loss: 0.5904, Accuracy: 0.8131
+[Client Evaluation Aggregated] Loss: 0.2581, Accuracy: 0.9119
+[Client Training Aggregated] Loss: 0.2914, Accuracy: 0.8910
+[Central Evaluation] Loss: 0.6621, Accuracy: 0.7947
+[Central Evaluation] Loss: 0.6226, Accuracy: 0.7626
+[Client Evaluation Aggregated] Loss: 0.2609, Accuracy: 0.9112
+[Client Training Aggregated] Loss: 0.2929, Accuracy: 0.8900
+[Central Evaluation] Loss: 0.6829, Accuracy: 0.5092
+[Central Evaluation] Loss: 0.7974, Accuracy: 0.1881
+[Client Evaluation Aggregated] Loss: 0.2633, Accuracy: 0.9096
+[Client Training Aggregated] Loss: 0.2981, Accuracy: 0.8885
+[Central Evaluation] Loss: 0.9581, Accuracy: 0.1972
+[Central Evaluation] Loss: 0.5762, Accuracy: 0.7982
+[Client Evaluation Aggregated] Loss: 0.2756, Accuracy: 0.9084
+[Client Training Aggregated] Loss: 0.3039, Accuracy: 0.8858
+[Central Evaluation] Loss: 0.5640, Accuracy: 0.8108
+[Central Evaluation] Loss: 0.5823, Accuracy: 0.7982
+[Client Evaluation Aggregated] Loss: 0.2849, Accuracy: 0.9053
+[Client Training Aggregated] Loss: 0.3025, Accuracy: 0.8840
+[Central Evaluation] Loss: 0.8128, Accuracy: 0.1892
+[Central Evaluation] Loss: 0.5624, Accuracy: 0.8119
+[Client Evaluation Aggregated] Loss: 0.2847, Accuracy: 0.9037
+Saved accuracy plot to accuracy_plot_4.png
+Flower server process completed.
+Client process 4047598 completed successfully.
+Client process 4047601 completed successfully.
+Client process 4047604 completed successfully.
+Client process 4047607 completed successfully.
+Client process 4047610 completed successfully.
+[gRPC Server] Started on port 50057
+[gRPC Server] Received shutdown signal (15). Shutting down gracefully...
+[Server] No gradient norms logged — histogram not generated.
+gRPC server terminated.
+Federated learning session completed at Mon Jul 28 03:26:14 EDT 2025.

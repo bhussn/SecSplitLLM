@@ -1,0 +1,355 @@
+Starting federated learning run at Tue Jul 29 14:29:19 EDT 2025
+Launching gRPC server on port 50056...
+Waiting for gRPC server to be ready on port 50056...
+2025-07-29 14:29:23.948334: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:29:23.960596: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753813763.975287  537372 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753813763.979722  537372 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753813763.992067  537372 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813763.992096  537372 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813763.992098  537372 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813763.992100  537372 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:29:23.995642: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-29 14:29:27.768103: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:29:27.798607: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753813767.837427  537452 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753813767.849525  537452 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753813767.876679  537452 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813767.876720  537452 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813767.876724  537452 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813767.876726  537452 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:29:27.881474: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+gRPC server is ready.
+Launching Flower server on port 8086...
+Waiting for Flower server to be ready on port 8086...
+2025-07-29 14:29:33.117098: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:29:33.135640: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753813773.159836  537768 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753813773.167036  537768 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753813773.189663  537768 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813773.189781  537768 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813773.189794  537768 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813773.189812  537768 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:29:33.196630: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=10, no round_timeout
+Flower server is ready.
+[92mINFO [0m:      Flower ECE: gRPC server running (10 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Requesting initial parameters from one random client
+Launching client 0...
+Launching client 1...
+Launching client 2...
+Launching client 3...
+Launching client 4...
+2025-07-29 14:29:58.061105: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:29:58.087568: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-29 14:29:58.115704: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753813798.129075  538066 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753813798.141213  538066 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-29 14:29:58.147975: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753813798.186048  538063 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+W0000 00:00:1753813798.187098  538066 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.187132  538066 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.187135  538066 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.187137  538066 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:29:58.192136: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+E0000 00:00:1753813798.194840  538063 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753813798.212602  538063 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.212640  538063 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.212644  538063 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.212646  538063 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:29:58.217565: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-29 14:29:58.394290: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:29:58.412452: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753813798.436678  538075 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-07-29 14:29:58.441888: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+E0000 00:00:1753813798.443614  538075 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-29 14:29:58.461300: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+W0000 00:00:1753813798.464597  538075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.464627  538075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.464630  538075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.464632  538075 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:29:58.469511: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753813798.483941  538069 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753813798.491150  538069 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753813798.517011  538069 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.517108  538069 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.517121  538069 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813798.517135  538069 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:29:58.522013: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-29 14:29:58.974002: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:29:58.994184: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753813799.016474  538072 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753813799.022232  538072 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753813799.066657  538072 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813799.066730  538072 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813799.066735  538072 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753813799.066750  538072 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:29:59.074849: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      
+[92mINFO [0m:      Received: get_parameters message ae87ae88-f3b8-4635-ab49-5f24a963e172
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Received initial parameters from one random client
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.7166208362360613, {'accuracy': 0.4908256880733945}
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 373b7590-86d6-4d39-9f75-3ed7059f5a89
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message e68a174b-04d2-4527-8536-0ce825cefee2
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message d8e19e29-df78-4e8b-bd4a-2fd42682d104
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message d8380640-4c8d-44ce-aa9f-a29352c5025b
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message af35dba3-5e8f-44b9-8d8c-7673f783d55b
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (1, 0.838313517767355, {'accuracy': 0.20527522935779816}, 377.73258234595414)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 25c0c45c-de28-4592-8706-daf252583384
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 37597945-1569-468a-8a33-af0d5282a4a9
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 3ff3d555-ce1c-498b-8808-5d094556e26e
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 02b7d453-5827-4701-ba1f-048a883e5af5
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 43035d2c-5525-41e0-aa2d-1808b308d08b
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message e0172011-f9dd-437d-9f64-68e07fb5cfc5
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message fc862873-4261-491e-b903-72c5d26fe5ff
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message a81baf37-3229-46d4-8be7-343d8ce6fbde
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 0fb6b61c-a7de-415d-a68e-869caac01257
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 5bcfa1ab-54d5-4f0c-86b2-8dc791d33a21
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (2, 0.7058256000553796, {'accuracy': 0.4105504587155963}, 816.6331517540384)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 015222dd-7b3f-4461-8119-1e8fb889db9c
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 115c5970-928d-4c7c-9e9f-3dc1fe75540d
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 402df0ac-28f3-45b8-9851-afa82628f3fd
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 81c373d9-702e-4e86-8f37-73aeed35e5fb
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 1547abe7-7c4f-424f-a1f0-245bee17679a
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 567465ef-1fed-4bca-9675-de304c5f6b50
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 7da27f1a-ddf9-4ae1-8931-c1c0d5532f4c
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 8f8a2606-4a83-4347-b965-8c8d4d8a74e9
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 262deea4-b767-41cd-bddd-aae092d90587
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 684d492f-e4e4-4524-80ca-52adc83055f1
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (3, 0.7765161739576847, {'accuracy': 0.2098623853211009}, 1240.1521539390087)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 58468036-a47d-4b27-993e-65f9355995bf
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 2313ee19-3d9a-4c5a-87e3-63e7a3c2ea85
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message c85a81e4-9fe9-4527-967e-76f52f2dc392
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message cf074ece-40e8-477d-bd2e-d9e631b53b39
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 36683eaa-9d64-45b5-abe3-510709b2445a
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 4]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 39bd8794-1fa1-47bf-9a96-45d9f482ab7c
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message da02a056-cb51-467c-8aae-973fa186f7ee
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 25451b98-28ad-450b-a362-3858e58135f3
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message f894cd1e-4b31-4019-a34e-472cee372a97
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message d9fcf403-08bd-49a4-8aad-983e10e677bf
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (4, 0.5986253471549497, {'accuracy': 0.8096330275229358}, 1768.4829072180437)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 98f4b108-142c-4b16-8983-4a271f08f429
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message aea7f499-010a-4666-af3e-936eac098658
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message ce9f7584-6e8b-437b-8f9f-8ae797c6213a
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message d5794b3b-3262-49d0-a45b-1e0882378d7f
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 69f76fe6-da6a-488c-b83f-18ef014dd0be
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 5 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 5]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 0bb38202-72de-4e2c-9186-96825fc4e427
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message d6947a02-9d13-4b93-bd1f-7eddf0509062
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message b65766dc-b0ec-4059-8bde-e324213ddb01
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message a115305b-d137-4d0a-b1e4-c9c5df9180ef
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 2bfe37ab-5d51-418d-ab96-9f0a2c610227

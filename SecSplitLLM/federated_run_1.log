@@ -1,0 +1,122 @@
+Starting federated learning run at Wed Jul 30 08:03:29 EDT 2025
+Launching gRPC server on port 50053...
+Waiting for gRPC server to be ready on port 50053...
+gRPC server is ready.
+Launching Flower server on port 8083...
+Waiting for Flower server to be ready on port 8083...
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/SecSplitLLM/SecSplitLLM/split-fed-smpc/clients/smpc_client.py", line 214, in <module>
+[rank0]:     fl.client.start_client(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+[rank0]:     start_client_internal(
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/app.py", line 395, in start_client_internal
+[rank0]:     message = receive()
+[rank0]:               ^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/flwr/compat/client/grpc_client/connection.py", line 142, in receive
+[rank0]:     proto = next(server_message_iterator)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 543, in __next__
+[rank0]:     return self._next()
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/a/buffalo.cs.fiu.edu./disk/jccl-002/homes/bhuss011/Downloads/splitfed_env/lib64/python3.11/site-packages/grpc/_channel.py", line 969, in _next
+[rank0]:     raise self
+[rank0]: grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+[rank0]: 	status = StatusCode.UNAVAILABLE
+[rank0]: 	details = "Socket closed"
+[rank0]: 	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::1%5D:8083 {grpc_status:14, grpc_message:"Socket closed"}"
+[rank0]: >
+2025-07-30 08:03:31.799006: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-30 08:03:31.811948: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753877011.828317  927378 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753877011.832862  927378 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753877011.845024  927378 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877011.845041  927378 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877011.845043  927378 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753877011.845045  927378 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-30 08:03:31.848842: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.

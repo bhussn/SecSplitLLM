@@ -1,0 +1,48 @@
+2025-07-29 14:30:08,757 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-07-29 14:30:08,804 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2025-07-29 14:30:15,768 - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2025-07-29 14:30:15,770 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2025-07-29 14:30:15,781 - DEBUG - ChannelConnectivity.IDLE
+2025-07-29 14:30:15,781 - DEBUG - ChannelConnectivity.READY
+2025-07-29 14:30:43,100 - INFO - 
+2025-07-29 14:30:43,101 - INFO 2025-07-29 14:30:49,483 - INFO - 
+2025-07-29 14:30:49,483 - INF2025-07-29 14:36:34,123 - INFO - Sent reply
+2025-07-29 14:37:06,512 - INFO - 
+2025-07-29 14:37:06,512 - INFO - Received: evaluate message 43035d2c-5525-41e0-aa2d-1808b308d08b
+2025-07-29 14:38:08,184 - INFO - Sent reply
+2025-07-29 14:38:28,571 - INFO - 
+2025-07-29 14:38:28,571 - INFO - Received: train message 5bcfa1ab-54d5-4f0c-86b2-8dc791d33a21
+2025-07-29 14:43:54,717 - INFO - Sent reply
+2025-07-29 14:44:25,286 - INFO - 
+2025-07-29 14:44:25,286 - INFO - Received: evaluate message 81c373d9-702e-4e86-8f37-73aeed35e5fb
+2025-07-29 14:45:16,739 - INFO - Sent reply
+2025-07-29 14:45:37,671 - INFO - 
+2025-07-29 14:45:37,671 - INFO - Received: train message 262deea4-b767-41cd-bddd-aae092d90587
+2025-07-29 14:50:54,511 - INFO - Sent reply
+2025-07-29 14:51:19,822 - INFO - 
+2025-07-29 14:51:19,822 - INFO 2025-07-29 14:51:28,764 - INFO - 
+2025-07-29 14:51:28,765 - INFO -2025-07-29 14:52:29,126 - INFO - Sent reply
+2025-07-29 14:52:59,890 - INFO - 
+2025-07-29 14:52:59,890 - INFO 2025-07-29 14:53:00,003 - INFO - 
+2025-07-29 14:53:00,003 - INF2025-07-29 14:59:46,027 - INFO - Sent reply
+2025-07-29 15:00:12,063 - INFO - 
+2025-07-29 15:00:12,063 - INFO 2025-07-29 15:00:15,239 - INFO - 
+2025-07-29 15:00:15,240 - INFO -2025-07-29 15:01:09,815 - INFO - Sent reply
+2025-07-29 15:01:35,923 - INFO - 
+2025-07-29 15:01:35,923 - INFO - Received: train message 2bfe37ab-5d51-418d-ab96-9f0a2c610227
+O - Received: train message a115305b-d137-4d0a-b1e4-c9c5df9180ef
+5:01:30,966 - INFO - 
+2025-07-29 15:01:30,967 - INFO - Received: train message d6947a02-9d13-4b93-bd1f-7eddf0509062

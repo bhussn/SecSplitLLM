@@ -1,0 +1,329 @@
+Starting federated learning run at Tue Jul 29 14:50:21 EDT 2025
+Launching gRPC server on port 50057...
+Waiting for gRPC server to be ready on port 50057...
+2025-07-29 14:50:32.339340: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:50:32.372631: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753815032.414015  542393 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753815032.426139  542393 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753815032.472882  542393 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815032.472933  542393 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815032.472937  542393 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815032.472940  542393 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:50:32.477200: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+gRPC server is ready.
+Launching Flower server on port 8087...
+Waiting for Flower server to be ready on port 8087...
+Flower server is ready.
+Launching client 0...
+Launching client 1...
+Launching client 2...
+Launching client 3...
+Launching client 4...
+2025-07-29 14:50:43.083634: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:50:43.098634: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753815043.114979  542671 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753815043.119711  542671 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753815043.132244  542671 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815043.132266  542671 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815043.132269  542671 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815043.132271  542671 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:50:43.135694: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-29 14:50:46.443899: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:50:46.461777: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753815046.483287  542679 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753815046.490219  542679 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753815046.508547  542679 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.508622  542679 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.508628  542679 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.508631  542679 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:50:46.513588: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-29 14:50:46.759436: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:50:46.791512: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753815046.831491  542688 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753815046.842801  542688 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-29 14:50:46.857538: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+W0000 00:00:1753815046.871445  542688 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.871503  542688 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.871508  542688 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.871512  542688 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:50:46.878015: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-29 14:50:46.882859: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753815046.910312  542691 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753815046.917295  542691 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-07-29 14:50:46.930615: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+W0000 00:00:1753815046.934634  542691 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.934662  542691 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.934664  542691 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.934666  542691 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:50:46.938516: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-07-29 14:50:46.944129: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-29 14:50:46.950967: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-07-29 14:50:46.956523: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753815046.972434  542685 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753815046.977020  542685 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1753815046.977656  542682 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1753815046.985446  542682 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1753815046.989435  542685 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.989467  542685 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.989470  542685 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.989471  542685 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:50:46.992873: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+W0000 00:00:1753815046.999741  542682 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.999764  542682 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.999766  542682 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1753815046.999768  542682 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-07-29 14:50:47.003668: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=1, no round_timeout
+Port in server address localhost:8087 is already in use.
+Flower server process completed.
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:57:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:57:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/29/2025 14:50:57:DEBUG:ChannelConnectivity.IDLE
+07/29/2025 14:50:57:DEBUG:ChannelConnectivity.CONNECTING
+07/29/2025 14:50:57:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+07/29/2025 14:50:57:INFO:
+[92mINFO [0m:      Received: get_parameters message 04436f9d-b0e9-4b11-88a4-39baf7a745ee
+07/29/2025 14:50:57:INFO:Received: get_parameters message 04436f9d-b0e9-4b11-88a4-39baf7a745ee
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:57:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:57:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/29/2025 14:50:57:DEBUG:ChannelConnectivity.IDLE
+07/29/2025 14:50:57:DEBUG:ChannelConnectivity.READY
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:57:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:57:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/29/2025 14:50:57:DEBUG:ChannelConnectivity.IDLE
+07/29/2025 14:50:57:DEBUG:ChannelConnectivity.CONNECTING
+07/29/2025 14:50:57:DEBUG:ChannelConnectivity.READY
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:58:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:58:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/29/2025 14:50:58:DEBUG:ChannelConnectivity.IDLE
+07/29/2025 14:50:58:DEBUG:ChannelConnectivity.CONNECTING
+07/29/2025 14:50:58:DEBUG:ChannelConnectivity.READY
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:58:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+07/29/2025 14:50:58:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+07/29/2025 14:50:58:DEBUG:ChannelConnectivity.IDLE
+07/29/2025 14:50:58:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      Sent reply
+07/29/2025 14:51:01:INFO:Sent reply
+[92mINFO [0m:      Received initial parameters from one random client
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.6821575837397794, {'accuracy': 0.5779816513761468}
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/29/2025 14:51:20:INFO:
+[92mINFO [0m:      Received: train message c2fd28db-86e4-4771-a0bf-8b33bc6f2c0e
+07/29/2025 14:51:20:INFO:Received: train message c2fd28db-86e4-4771-a0bf-8b33bc6f2c0e
+[92mINFO [0m:      
+07/29/2025 14:51:24:INFO:
+[92mINFO [0m:      Received: train message 45ca8c32-f769-4bd7-bb05-7a5e8042f4fa
+07/29/2025 14:51:24:INFO:Received: train message 45ca8c32-f769-4bd7-bb05-7a5e8042f4fa
+[92mINFO [0m:      
+07/29/2025 14:51:25:INFO:
+[92mINFO [0m:      Received: train message 2886f0fc-353d-451f-ab48-9b04a9bba36a
+07/29/2025 14:51:25:INFO:Received: train message 2886f0fc-353d-451f-ab48-9b04a9bba36a
+[92mINFO [0m:      
+07/29/2025 14:51:28:INFO:
+[92mINFO [0m:      Received: train message 213bff44-7b00-401b-a181-5e25a13eb27f
+07/29/2025 14:51:28:INFO:Received: train message 213bff44-7b00-401b-a181-5e25a13eb27f
+[92mINFO [0m:      
+07/29/2025 14:51:28:INFO:
+[92mINFO [0m:      Received: train message 40e04849-84dd-479e-a0fa-5f4214a44041
+07/29/2025 14:51:28:INFO:Received: train message 40e04849-84dd-479e-a0fa-5f4214a44041
+[92mINFO [0m:      Sent reply
+07/29/2025 15:00:07:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/29/2025 15:00:15:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/29/2025 15:00:17:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/29/2025 15:00:18:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+07/29/2025 15:00:19:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 5 results and 0 failures
+[92mINFO [0m:      fit progress: (1, 0.702495490739105, {'accuracy': 0.47477064220183485}, 565.2963293180801)
+[92mINFO [0m:      configure_evaluate: strategy sampled 5 clients (out of 5)
+[92mINFO [0m:      
+07/29/2025 15:00:44:INFO:
+[92mINFO [0m:      Received: evaluate message 82b023e8-7e80-4474-ba8a-1325a3561cc9
+07/29/2025 15:00:44:INFO:Received: evaluate message 82b023e8-7e80-4474-ba8a-1325a3561cc9
+[92mINFO [0m:      
+07/29/2025 15:00:45:INFO:
+[92mINFO [0m:      Received: evaluate message 8fcf8ebe-c443-4fa4-b61a-ff36fdce5823
+07/29/2025 15:00:45:INFO:Received: evaluate message 8fcf8ebe-c443-4fa4-b61a-ff36fdce5823
+[92mINFO [0m:      
+07/29/2025 15:00:46:INFO:
+[92mINFO [0m:      Received: evaluate message 556f0206-7b6b-43a1-8a04-bf35d456c499
+07/29/2025 15:00:46:INFO:Received: evaluate message 556f0206-7b6b-43a1-8a04-bf35d456c499
+[92mINFO [0m:      
+07/29/2025 15:00:53:INFO:
+[92mINFO [0m:      Received: evaluate message 937548da-558d-431a-abc6-7019f8694bfa
+07/29/2025 15:00:53:INFO:Received: evaluate message 937548da-558d-431a-abc6-7019f8694bfa
+[92mINFO [0m:      
+07/29/2025 15:00:53:INFO:
+[92mINFO [0m:      Received: evaluate message cecd9e8e-0bbc-4fbd-b00b-ca8b8e00ef0c
+07/29/2025 15:00:53:INFO:Received: evaluate message cecd9e8e-0bbc-4fbd-b00b-ca8b8e00ef0c
